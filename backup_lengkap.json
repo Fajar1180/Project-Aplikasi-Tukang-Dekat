@@ -1,0 +1,4881 @@
+{
+  "milestones": [
+    {
+      "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+      "due_on": "2026-05-24T00:00:00Z",
+      "description": "Auth register/login, DB migration, Flutter project init"
+    },
+    {
+      "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+      "due_on": "2026-05-31T00:00:00Z",
+      "description": "Order, Provider, Service Catalog API"
+    },
+    {
+      "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+      "due_on": "2026-06-07T00:00:00Z",
+      "description": "QRIS DP & Final, webhook, n8n integration"
+    },
+    {
+      "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+      "due_on": "2026-06-14T00:00:00Z",
+      "description": "Flutter screens, integrasi API, review & rating"
+    },
+    {
+      "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+      "due_on": "2026-06-18T00:00:00Z",
+      "description": "QA testing, bug fix, demo, dokumentasi final"
+    }
+  ],
+  "labels": [
+    {
+      "name": "bug",
+      "color": "d73a4a",
+      "description": "Something isn't working"
+    },
+    {
+      "name": "documentation",
+      "color": "0052cc",
+      "description": "Improvements or additions to documentation"
+    },
+    {
+      "name": "duplicate",
+      "color": "cfd3d7",
+      "description": "This issue or pull request already exists"
+    },
+    {
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    },
+    {
+      "name": "good first issue",
+      "color": "7057ff",
+      "description": "Good for newcomers"
+    },
+    {
+      "name": "help wanted",
+      "color": "008672",
+      "description": "Extra attention is needed"
+    },
+    {
+      "name": "invalid",
+      "color": "e4e669",
+      "description": "This doesn't seem right"
+    },
+    {
+      "name": "module: admin",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: auth",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: notification",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: order",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: payment",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: provider",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: review",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "module: UI/UX",
+      "color": "c5def5",
+      "description": ""
+    },
+    {
+      "name": "priority: high",
+      "color": "b60205",
+      "description": "High priority"
+    },
+    {
+      "name": "priority: low",
+      "color": "c2e0c6",
+      "description": "Low priority"
+    },
+    {
+      "name": "priority: medium",
+      "color": "fbca04",
+      "description": "Medium priority"
+    },
+    {
+      "name": "question",
+      "color": "d876e3",
+      "description": "Further information is requested"
+    },
+    {
+      "name": "role: Backend",
+      "color": "e4e669",
+      "description": "Backend Developer"
+    },
+    {
+      "name": "role: Frontend",
+      "color": "d93f0b",
+      "description": "Frontend Developer"
+    },
+    {
+      "name": "role: PM",
+      "color": "0075ca",
+      "description": "Project Manager"
+    },
+    {
+      "name": "role: Testing",
+      "color": "0e8a16",
+      "description": "QA / Testing"
+    },
+    {
+      "name": "status: blocked",
+      "color": "e11d48",
+      "description": "Tertahan / ada hambatan"
+    },
+    {
+      "name": "status: review",
+      "color": "8b5cf6",
+      "description": "Perlu review"
+    },
+    {
+      "name": "testing",
+      "color": "0e8a16",
+      "description": ""
+    },
+    {
+      "name": "week-1 (11-17 Mei)",
+      "color": "bfd4f2",
+      "description": "Minggu 1"
+    },
+    {
+      "name": "week-2 (18-24 Mei)",
+      "color": "bfd4f2",
+      "description": "Minggu 2"
+    },
+    {
+      "name": "week-3 (25-31 Mei)",
+      "color": "bfd4f2",
+      "description": "Minggu 3"
+    },
+    {
+      "name": "week-4 (1-7 Jun)",
+      "color": "bfd4f2",
+      "description": "Minggu 4"
+    },
+    {
+      "name": "week-5 (8-14 Jun)",
+      "color": "bfd4f2",
+      "description": "Minggu 5"
+    },
+    {
+      "name": "week-6 (15-18 Jun)",
+      "color": "bfd4f2",
+      "description": "Minggu 6 (Final)"
+    },
+    {
+      "name": "wontfix",
+      "color": "ffffff",
+      "description": "This will not be worked on"
+    }
+  ],
+  "issues": [
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPersiapan dan pelaksanaan demo TukangDekat untuk UAS.\n\n## Skenario Demo\n1. Register Customer & Provider\n2. Provider setup profil & layanan\n3. Customer cari provider & buat order\n4. Generate & bayar QRIS DP (sandbox)\n5. Provider terima order & mulai kerja\n6. Provider complete order + input final price\n7. Customer bayar pelunasan QRIS\n8. Order CLOSED â€“ Customer beri rating\n9. Treasurer lihat laporan transaksi\n10. Admin verifikasi provider\n\n## Tasks\n- [ ] Gladi resik demo (14 Juni)\n- [ ] Siapkan device untuk demo\n- [ ] Backup APK & pastikan server live\n- [ ] Siapkan slide presentasi\n- [ ] Presentasi UAS (15â€“18 Juni)",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[ALL] Demo & Presentasi UAS"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nFinalisasi semua dokumentasi dan laporan untuk pengumpulan UAS.\n\n## Tasks\n- [ ] Update CHANGELOG.md dengan semua perubahan\n- [ ] Pastikan README.md lengkap (cara install, cara jalankan)\n- [ ] Laporan pengujian final dari QA\n- [ ] Screenshot demo semua fitur\n- [ ] Rekaman video demo (jika diminta)\n- [ ] Kumpulkan semua dokumen ke folder yang diminta dosen\n- [ ] Final review repo GitHub (hapus file tidak perlu)\n\n## Referensi\n- Panduan UAS Kelas A1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[PM] Laporan Akhir & Dokumentasi Final"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuild APK release Flutter untuk demo UAS.\n\n## Tasks\n- [ ] Update base URL ke production server\n- [ ] flutter build apk --release\n- [ ] Test APK di device fisik\n- [ ] Test semua fitur dengan server production\n- [ ] Upload APK ke Google Drive / release GitHub\n\n## Referensi\n- SRS 2.4 (Android min versi 8+)",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[Frontend] Build APK release untuk demo"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nDeploy aplikasi ke server VPS untuk demo UAS.\n\n## Tasks\n- [ ] Setup VPS (DigitalOcean/Niagahoster/dll)\n- [ ] Clone repo & konfigurasi .env production\n- [ ] docker-compose up di server\n- [ ] Setup domain / IP publik\n- [ ] Konfigurasi SSL (Let's Encrypt / self-signed)\n- [ ] Test semua endpoint dari URL production\n- [ ] Seed data dummy untuk demo\n\n## Referensi\n- Deployment Diagram, NFR-04",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[Backend] Deploy ke VPS & konfigurasi production"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian final sebelum demo UAS.\n\n## Tasks\n- [ ] Verify semua bug dari week sebelumnya sudah fixed\n- [ ] Regression test: pastikan fix tidak breaking fitur lain\n- [ ] Test di device Android fisik (minimal 2 device berbeda)\n- [ ] Test koneksi ke server production/staging\n- [ ] Buat laporan pengujian final\n- [ ] Sign-off QA: semua critical bug resolved\n\n## Referensi\n- TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[Testing] Final QA â€“ Bug Fix Verification & Regression Test"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPersiapan presentasi dan pastikan semua dokumentasi lengkap.\n\n## Tasks\n- [ ] Update SRS jika ada perubahan implementasi\n- [ ] Pastikan API Documentation akurat dan up-to-date\n- [ ] Review semua diagram (Class, Sequence, Component, Deployment)\n- [ ] Siapkan demo script (skenario demo UAS)\n- [ ] Cek semua deliverable sesuai panduan UAS\n- [ ] Koordinasi jadwal gladi resik demo\n\n## Referensi\n- Panduan Tugas Besar Kelas A1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[PM] Review dokumen final & persiapan demo UAS"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian integrasi end-to-end untuk semua user journey.\n\n## Tasks\n- [ ] User journey Customer: dari register sampai review\n- [ ] User journey Provider: dari register sampai complete order\n- [ ] User journey Admin: verifikasi provider\n- [ ] User journey Treasurer: lihat laporan transaksi\n- [ ] Performance test: response time API < 1 detik (NFR-01)\n- [ ] Security test: akses cross-role harus 403\n- [ ] Test concurrent request (multiple order)\n\n## Referensi\n- SRS NFR-01 s/d NFR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Testing] Integration Testing â€“ Full User Journey"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan semua endpoint aman, tervalidasi, dan mengembalikan error yang konsisten.\n\n## Tasks\n- [ ] Review semua Form Request validation\n- [ ] Pastikan semua response mengikuti format API Doc\n- [ ] Rate limiting untuk endpoint sensitif\n- [ ] HTTPS enforcement\n- [ ] Review semua role middleware\n- [ ] Pastikan password hashing bcrypt\n- [ ] Remove debug logs & dd()\n\n## Referensi\n- SRS NFR-04 s/d NFR-07",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Backend] Finalisasi & hardening API (security, validation, error handling)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nFinalisasi endpoint Admin dan Treasurer.\n\n## Tasks\n- [ ] POST /api/admin/providers/{id}/verify\n- [ ] GET /api/treasurer/transactions (dengan filter)\n- [ ] Middleware role guard: ADMIN, TREASURER\n- [ ] Response pagination untuk list transaksi\n- [ ] Pastikan semua endpoint terdokumentasi\n\n## Referensi\n- API Doc 5.7, SRS FR-25, FR-26",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfug",
+          "name": "module: admin",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Backend] Admin endpoints & Treasurer report (FR-25, FR-26)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPerbaikan visual dan pengalaman pengguna secara keseluruhan.\n\n## Tasks\n- [ ] Konsistensi warna, font, spacing di semua screen\n- [ ] Animasi transisi antar halaman\n- [ ] Splash screen & app icon\n- [ ] Handling offline state\n- [ ] Aksesibilitas (font size, contrast)\n- [ ] Test di berbagai ukuran layar Android\n\n## Referensi\n- SRS NFR-10 (Usability)",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Polish UI, responsiveness & UX improvements"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan seluruh flow Provider berjalan mulus.\n\n## Tasks\n- [ ] Test flow: Login Provider â†’ Lihat order masuk â†’ Terima\n- [ ] Test flow: Mulai kerja (IN_PROGRESS) setelah DP paid\n- [ ] Test flow: Input final_price â†’ Complete order\n- [ ] UI notifikasi in-app untuk Provider\n- [ ] Polish UI Provider screens\n\n## Referensi\n- Business Process 3.4 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Integrasi end-to-end flow Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan seluruh flow Customer dari awal sampai akhir berjalan mulus.\n\n## Tasks\n- [ ] Test flow: Register â†’ Login â†’ Cari Provider â†’ Buat Order\n- [ ] Test flow: Bayar DP â†’ Tunggu Provider Accept â†’ Tunggu IN_PROGRESS\n- [ ] Test flow: Order COMPLETED â†’ Bayar Final â†’ CLOSED\n- [ ] Test flow: Beri Rating & Review\n- [ ] Fix navigasi antar screen\n- [ ] Handle semua error state (network error, expired token, dll)\n- [ ] Polish UI: loading state, empty state, error state\n\n## Referensi\n- Business Process 3.1 s/d 3.6",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Integrasi end-to-end flow Customer (Order â†’ Bayar DP â†’ Closed)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian alur pembayaran QRIS end-to-end dengan payment gateway sandbox.\n\n## Tasks\n- [ ] Test generate QRIS DP\n- [ ] Test webhook callback (simulasi PAID, FAILED, EXPIRED)\n- [ ] Test verifikasi signature webhook (valid & tampered)\n- [ ] Test otomasi closed order setelah Final PAID\n- [ ] Test timeout QR dan regenerate\n- [ ] Test notifikasi n8n terpicu sesuai event\n- [ ] Dokumentasikan hasil test\n\n## Referensi\n- API Doc 5.4, 5.5, SRS NFR-06",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfFA",
+          "name": "module: notification",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Testing] Testing Payment Flow & Webhook"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman rating, review, dan dashboard khusus Admin & Treasurer.\n\n## Tasks\n- [ ] UI Form Rating (bintang 1â€“5, kolom komentar)\n- [ ] Integrasi POST /api/orders/{id}/review\n- [ ] UI Dashboard Treasurer (list transaksi, filter date & type)\n- [ ] Integrasi GET /api/treasurer/transactions\n- [ ] UI Admin: list provider, tombol verifikasi\n- [ ] Integrasi POST /api/admin/providers/{id}/verify\n\n## Referensi\n- API Doc 5.6, 5.7, SRS FR-23 s/d FR-26",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfug",
+          "name": "module: admin",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Rating & Review + Dashboard Admin/Treasurer"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman pembayaran pelunasan setelah order COMPLETED.\n\n## Tasks\n- [ ] UI Halaman Bayar Final (detail harga final, sisa bayar)\n- [ ] Integrasi POST /api/payments/{final_id}/qris\n- [ ] Tampilkan QR pelunasan\n- [ ] Polling status pembayaran\n- [ ] Transisi ke 'Order Closed' setelah PAID\n- [ ] Tampilkan tombol Beri Rating setelah CLOSED\n\n## Referensi\n- API Doc 5.4, Business Process 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Pembayaran Pelunasan (QRIS Final)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman pembayaran DP dengan tampilan QR code.\n\n## Tasks\n- [ ] UI Halaman Bayar DP (informasi order, jumlah DP, QR code)\n- [ ] Integrasi POST /api/payments/{id}/qris\n- [ ] Tampilkan QR image dari qr_url\n- [ ] Timer countdown expiry QR\n- [ ] Polling GET /api/payments/{id} setiap 5 detik\n- [ ] Transisi ke 'DP Berhasil' setelah status PAID\n- [ ] Tombol regenerate QR jika expired\n\n## Referensi\n- API Doc 5.4, Business Process 3.3",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Pembayaran DP (QRIS)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSetup n8n dan integrasi event notifikasi ke WhatsApp/Email.\n\n## Tasks\n- [ ] Setup n8n container (sudah ada di docker-compose)\n- [ ] Buat workflow n8n untuk setiap event:\n  - order_created â†’ WA ke customer & provider\n  - order_accepted â†’ WA ke customer\n  - order_rejected â†’ WA ke customer\n  - dp_paid â†’ WA ke customer & provider\n  - order_completed â†’ WA ke customer (minta bayar pelunasan)\n  - final_paid â†’ WA ke semua\n- [ ] POST /api/integrations/n8n/events\n- [ ] Konfigurasi WA provider di n8n (Fonnte/Wablas/dll)\n- [ ] Catat ke notification_logs setiap pengiriman\n\n## Referensi\n- API Doc 5.5\n- SRS FR-21, FR-22\n- Component Diagram: Backend â†’ n8n â†’ WA/Email",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfFA",
+          "name": "module: notification",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Integrasi n8n â€“ Event Notifikasi (FR-21, FR-22)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint webhook untuk menerima callback dari payment gateway.\n\n## Tasks\n- [ ] POST /api/webhooks/payments (no auth, dengan signature verification)\n- [ ] Verifikasi signature/secret dari payment gateway (NFR-06)\n- [ ] Update Payment status: PAID / FAILED / EXPIRED\n- [ ] Jika DP PAID: trigger notifikasi event dp_paid\n- [ ] Jika Final PAID: update Order status â†’ CLOSED + trigger final_paid\n- [ ] Logging semua webhook ke notification_logs\n- [ ] Test webhook dengan ngrok / Midtrans simulator\n\n## Referensi\n- API Doc 5.4, SRS FR-17, FR-20\n- Business Rule 4: Webhook wajib verifikasi signature",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Webhook Payment Callback & Status Update (FR-17, FR-20)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nIntegrasi dengan Midtrans/Xendit sandbox untuk generate QRIS.\n\n## Tasks\n- [ ] Setup Midtrans/Xendit SDK di Laravel\n- [ ] POST /api/payments/{payment_id}/qris (generate QR)\n- [ ] Simpan external_payment_id & update status PENDING\n- [ ] GET /api/payments/{payment_id} (cek status)\n- [ ] Konfigurasi .env untuk API key sandbox\n- [ ] Handle QRIS expiry\n\n## Referensi\n- API Doc 5.4\n- SRS FR-16, FR-19, NFR-06",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Integrasi Payment Gateway QRIS â€“ Generate QR (FR-16, FR-19)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nRapat mingguan review progress, identifikasi blocker, dan update jadwal.\n\n## Tasks\n- [ ] Kumpulkan status update dari semua anggota\n- [ ] Update GitHub Project board\n- [ ] Identifikasi blocker & buat issue status: blocked\n- [ ] Notulen rapat (docs/notulen/)\n- [ ] Pastikan API Doc sudah sinkron dengan implementasi\n- [ ] Review PR yang pending",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[PM] Review progress Week 2 & koordinasi Week 3"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian menyeluruh alur order dari CREATED sampai CLOSED.\n\n## Tasks\n- [ ] Test POST /api/orders (valid & invalid)\n- [ ] Test accept/reject/start/complete/cancel\n- [ ] Test business rule: start tanpa DP PAID harus error\n- [ ] Test status transition yang tidak valid\n- [ ] Test review setelah CLOSED\n- [ ] Test review duplicate (harus error)\n- [ ] Catat semua bug\n\n## Referensi\n- SRS BR-01 s/d BR-03, FR-11 s/d FR-14",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Testing] Testing Order Lifecycle (Postman + Manual)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nFlow untuk Provider dalam mengelola order masuk.\n\n## Tasks\n- [ ] UI notifikasi order masuk untuk Provider\n- [ ] Tombol Terima / Tolak order\n- [ ] Integrasi POST /api/orders/{id}/accept & reject\n- [ ] Tombol Mulai Kerja (IN_PROGRESS)\n- [ ] Integrasi POST /api/orders/{id}/start\n- [ ] Handle error jika DP belum dibayar\n- [ ] Form input final_price + tombol Selesai\n- [ ] Integrasi POST /api/orders/{id}/complete\n\n## Referensi\n- API Doc 5.3, Business Process 3.4",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Provider â€“ Terima/Tolak & Mulai Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman detail order dengan status tracking dan riwayat semua order.\n\n## Tasks\n- [ ] UI Detail Order (status badge, info provider, jadwal, harga)\n- [ ] Status timeline/stepper (CREATED â†’ ACCEPTED â†’ IN_PROGRESS â†’ COMPLETED â†’ CLOSED)\n- [ ] Tombol aksi sesuai role & status (terima, tolak, mulai, selesai)\n- [ ] UI Riwayat Order (list dengan filter status)\n- [ ] Integrasi GET /api/orders & GET /api/orders/{id}\n- [ ] Pull-to-refresh\n\n## Referensi\n- API Doc 5.3, Business Process 3.2â€“3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Detail Order & Riwayat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi form pembuatan order oleh Customer.\n\n## Tasks\n- [ ] UI Form Order (pilih layanan, jadwal datetime picker, alamat, catatan)\n- [ ] Upload foto kerusakan (opsional)\n- [ ] Preview estimasi harga & DP yang akan dibayar\n- [ ] Integrasi POST /api/orders\n- [ ] Handle response: tampilkan order detail + tombol bayar DP\n- [ ] Validasi form client-side\n\n## Referensi\n- API Doc 5.3, SRS FR-11",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Form Buat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint review dan kalkulasi rata-rata rating provider.\n\n## Tasks\n- [ ] POST /api/orders/{id}/review (role: CUSTOMER, hanya jika CLOSED)\n- [ ] GET /api/providers/{id}/reviews\n- [ ] Update avg_rating di provider_profiles setelah review\n- [ ] Validasi: 1 order maksimal 1 review\n\n## Referensi\n- API Doc 5.6\n- SRS FR-23, FR-24",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Reviews & Rating (FR-23, FR-24)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nLogika bisnis pembuatan tagihan DP 50% otomatis saat order dibuat.\n\n## Tasks\n- [ ] Service: hitung DP = 50% dari estimated_price\n- [ ] Insert Payment record (type=DP, status=UNPAID) saat order CREATED\n- [ ] Auto-create Final Payment saat order COMPLETED\n- [ ] Hitung final_amount = final_price - dp_amount\n- [ ] Validasi: order CLOSED hanya jika Final PAID (BR-03)\n- [ ] Database transaction untuk atomicity (NFR-09)\n\n## Referensi\n- SRS BR-01, BR-02, BR-03\n- API Doc response POST /api/orders",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] Auto-create DP Payment saat Order dibuat (BR-01)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint order lengkap dengan semua transisi status.\n\n## Tasks\n- [ ] POST /api/orders (buat order + DP invoice otomatis)\n- [ ] GET /api/orders (list dengan filter)\n- [ ] GET /api/orders/{id}\n- [ ] POST /api/orders/{id}/accept (PROVIDER)\n- [ ] POST /api/orders/{id}/reject (PROVIDER)\n- [ ] POST /api/orders/{id}/start (cek DP PAID â€“ BR-02)\n- [ ] POST /api/orders/{id}/complete (input final_price)\n- [ ] POST /api/orders/{id}/cancel\n- [ ] POST /api/orders/{id}/attachments\n- [ ] Business rule: start hanya jika DP PAID\n\n## Referensi\n- API Doc 5.3\n- SRS FR-11 s/d FR-14, BR-01 s/d BR-03\n- Business Process 3.2 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Orders: CRUD & Status Lifecycle (FR-11 s/d FR-14)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian endpoint auth dan service catalog yang sudah selesai di Week 2.\n\n## Tasks\n- [ ] Test POST /api/auth/register (valid & invalid)\n- [ ] Test POST /api/auth/login (valid & invalid)\n- [ ] Test GET /api/categories\n- [ ] Test GET /api/providers (dengan berbagai filter)\n- [ ] Test GET /api/providers/{id}\n- [ ] Catat semua bug ke GitHub Issues\n- [ ] Verifikasi response sesuai API Doc\n\n## Referensi\n- API Doc 5.1 & 5.2",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Testing] Testing Auth & Service Catalog API (Postman)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi halaman daftar dan detail provider.\n\n## Tasks\n- [ ] UI Daftar Provider (list card: nama, rating, area, verified badge)\n- [ ] Fitur filter/search (category, keyword)\n- [ ] Integrasi GET /api/providers\n- [ ] UI Detail Provider (profil, layanan, rating)\n- [ ] Integrasi GET /api/providers/{id}\n- [ ] Tombol 'Pesan Sekarang'\n\n## Referensi\n- API Doc 5.2, SRS FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Daftar Provider & Detail Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi halaman home dan daftar kategori jasa.\n\n## Tasks\n- [ ] UI Home Screen (header, kategori grid, provider featured)\n- [ ] Integrasi GET /api/categories\n- [ ] UI Category List dengan icon\n- [ ] Navigasi ke daftar provider by kategori\n\n## Referensi\n- API Doc 5.2, Wireframe Week 1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Home & Daftar Kategori"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi UI dan integrasi API untuk Login & Register.\n\n## Tasks\n- [ ] UI Screen Login (email, password, tombol login)\n- [ ] UI Screen Register (name, email, phone, password, role selector)\n- [ ] Integrasi POST /api/auth/login\n- [ ] Integrasi POST /api/auth/register\n- [ ] Simpan token ke secure storage\n- [ ] Navigasi ke dashboard sesuai role\n- [ ] Handle error 401/422\n\n## Referensi\n- SRS 3.1, API Doc 5.1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Login & Register"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat semua Eloquent model dengan relasi sesuai Class Diagram.\n\n## Tasks\n- [ ] Model User (dengan role enum)\n- [ ] Model ProviderProfile (belongsTo User)\n- [ ] Model ServiceCategory\n- [ ] Model ProviderService\n- [ ] Model Order (belongsTo Customer, Provider, Service)\n- [ ] Model Payment (hasMany Order)\n- [ ] Model Review\n- [ ] Model NotificationLog\n- [ ] Factory & Faker untuk semua model\n\n## Referensi\n- docs/srs/CLASS_DIAGRAM_SPEC_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] Model & Eloquent Relationships"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint katalog jasa dan pencarian provider.\n\n## Tasks\n- [ ] GET /api/categories\n- [ ] GET /api/providers (dengan filter category_id, q, is_verified)\n- [ ] GET /api/providers/{provider_user_id}\n- [ ] POST /api/provider/profile (role: PROVIDER)\n- [ ] POST /api/provider/services\n- [ ] PATCH /api/provider/services/{id}\n- [ ] Seeder 5 kategori default\n\n## Referensi\n- API Doc 5.2\n- SRS FR-05, FR-08, FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Service Catalog: Categories & Provider List (FR-08, FR-09, FR-10)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint autentikasi sesuai API Documentation section 5.1.\n\n## Tasks\n- [ ] POST /api/auth/register (customer & provider)\n- [ ] POST /api/auth/login (return token)\n- [ ] POST /api/auth/logout\n- [ ] Middleware role-based access (FR-04)\n- [ ] Password hashing (NFR-05)\n- [ ] Unit test auth endpoints\n\n## Acceptance Criteria\n- Register mengembalikan user_id & role\n- Login mengembalikan token valid\n- Endpoint protected menolak request tanpa token (401)\n\n## Referensi\n- API Doc 5.1\n- SRS FR-01 s/d FR-04",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Auth: Register, Login, Logout (FR-01, FR-02, FR-03)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSusun rencana pengujian mencakup semua fitur dari SRS.\n\n## Tasks\n- [ ] Identifikasi semua FR yang perlu diuji (FR-01 s/d FR-26)\n- [ ] Buat test case untuk happy path & edge case tiap fitur\n- [ ] Tentukan tools pengujian (Postman, Flutter test, dll)\n- [ ] Buat template bug report\n- [ ] Setup Postman Collection untuk API testing\n\n## Output\ndocs/testing/TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Testing] Buat Test Plan dokumen"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat wireframe untuk semua layar utama aplikasi.\n\n## Tasks\n- [ ] Wireframe: Login & Register\n- [ ] Wireframe: Home + Kategori\n- [ ] Wireframe: Daftar Provider & Detail\n- [ ] Wireframe: Form Buat Order\n- [ ] Wireframe: Detail Order & Status\n- [ ] Wireframe: Halaman Pembayaran (QR)\n- [ ] Wireframe: Rating & Review\n- [ ] Wireframe: Dashboard Admin/Treasurer\n\n## Referensi\n- SRS 3.1 User Interfaces",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Desain wireframe & UI kit (Figma)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nInisialisasi project Flutter dan setup arsitektur folder.\n\n## Tasks\n- [ ] Init Flutter project\n- [ ] Setup dependency: dio, provider/riverpod, go_router\n- [ ] Buat struktur folder (features, core, shared)\n- [ ] Setup base API service (base URL, auth interceptor)\n- [ ] Setup theme & color scheme\n- [ ] Push ke branch develop\n\n## Referensi\n- docs/srs/COMPONENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Setup Flutter project & struktur folder"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat semua Laravel migration berdasarkan schema_mysql_tukangdekat.sql.\n\n## Tasks\n- [ ] Migration: users\n- [ ] Migration: provider_profiles\n- [ ] Migration: service_categories\n- [ ] Migration: provider_services\n- [ ] Migration: orders\n- [ ] Migration: payments\n- [ ] Migration: order_attachments\n- [ ] Migration: reviews\n- [ ] Migration: notification_logs\n- [ ] Buat seeders untuk data dummy kategori\n\n## Referensi\n- docs/database/schema_mysql_tukangdekat.sql",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Database migration sesuai schema MySQL"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nInisialisasi project Laravel dengan Docker Compose sesuai Deployment Diagram.\n\n## Tasks\n- [ ] Init Laravel 11 project\n- [ ] Buat docker-compose.yml (nginx, laravel-api, db, n8n)\n- [ ] Setup .env template\n- [ ] Konfigurasi database connection\n- [ ] Test docker-compose up berjalan\n- [ ] Push ke branch develop\n\n## Referensi\n- docs/srs/DEPLOYMENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Setup Laravel project & Docker environment"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSusun Work Breakdown Structure dan jadwal mingguan yang jelas untuk setiap anggota.\n\n## Tasks\n- [ ] Susun WBS berdasarkan SRS feature list\n- [ ] Bagi task per role (Backend/Frontend/Testing)\n- [ ] Set deadline per task di GitHub Issues\n- [ ] Buat tabel RACI (Responsible, Accountable, Consulted, Informed)\n\n## Output\nFile docs/management/WBS_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Buat WBS & jadwal detail per anggota"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSetup GitHub Project (Kanban board) dengan kolom: Backlog, In Progress, Review, Done.\n\n## Tasks\n- [ ] Buat GitHub Project board\n- [ ] Konfigurasi kolom Kanban\n- [ ] Assign semua issues ke milestone yang sesuai\n- [ ] Sosialisasi cara penggunaan board ke tim\n- [ ] Buat template issue dan PR",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Setup GitHub Project Board & milestone tracking"
+    },
+    {
+      "assignees": [
+        {
+          "id": "U_kgDOB7mXJA",
+          "login": "Fajar1180",
+          "name": "Muhammad Fajar Nurjaman",
+          "databaseId": 129603364
+        }
+      ],
+      "body": "## Deskripsi\nReview SRS v1.1, pastikan semua anggota tim memahami scope sistem.\n\n## Tasks\n- [ ] Review dan finalisasi SRS_TukangDekat_v1.1.md\n- [ ] Distribusikan dokumen ke semua anggota\n- [ ] Buat GitHub repo & project board\n- [ ] Setup branch strategy (main, develop, feature/*)\n- [ ] Buat dokumen CONTRIBUTING.md\n\n## Referensi\n- docs/srs/SRS_TukangDekat_v1.1.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Finalisasi SRS & distribusi dokumen ke tim"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian final sebelum demo UAS.\n\n## Tasks\n- [ ] Verify semua bug dari week sebelumnya sudah fixed\n- [ ] Regression test: pastikan fix tidak breaking fitur lain\n- [ ] Test di device Android fisik (minimal 2 device berbeda)\n- [ ] Test koneksi ke server production/staging\n- [ ] Buat laporan pengujian final\n- [ ] Sign-off QA: semua critical bug resolved\n\n## Referensi\n- TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjta1A",
+          "name": "week-6 (15-18 Jun)",
+          "description": "Minggu 6 (Final)",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Week 6 â€“ Testing & Finalisasi (15â€“18 Jun)",
+        "description": "QA testing, bug fix, demo, dokumentasi final",
+        "dueOn": "2026-06-18T00:00:00Z"
+      },
+      "title": "[Testing] Final QA â€“ Bug Fix Verification & Regression Test"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPersiapan presentasi dan pastikan semua dokumentasi lengkap.\n\n## Tasks\n- [ ] Update SRS jika ada perubahan implementasi\n- [ ] Pastikan API Documentation akurat dan up-to-date\n- [ ] Review semua diagram (Class, Sequence, Component, Deployment)\n- [ ] Siapkan demo script (skenario demo UAS)\n- [ ] Cek semua deliverable sesuai panduan UAS\n- [ ] Koordinasi jadwal gladi resik demo\n\n## Referensi\n- Panduan Tugas Besar Kelas A1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[PM] Review dokumen final & persiapan demo UAS"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian integrasi end-to-end untuk semua user journey.\n\n## Tasks\n- [ ] User journey Customer: dari register sampai review\n- [ ] User journey Provider: dari register sampai complete order\n- [ ] User journey Admin: verifikasi provider\n- [ ] User journey Treasurer: lihat laporan transaksi\n- [ ] Performance test: response time API < 1 detik (NFR-01)\n- [ ] Security test: akses cross-role harus 403\n- [ ] Test concurrent request (multiple order)\n\n## Referensi\n- SRS NFR-01 s/d NFR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Testing] Integration Testing â€“ Full User Journey"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan semua endpoint aman, tervalidasi, dan mengembalikan error yang konsisten.\n\n## Tasks\n- [ ] Review semua Form Request validation\n- [ ] Pastikan semua response mengikuti format API Doc\n- [ ] Rate limiting untuk endpoint sensitif\n- [ ] HTTPS enforcement\n- [ ] Review semua role middleware\n- [ ] Pastikan password hashing bcrypt\n- [ ] Remove debug logs & dd()\n\n## Referensi\n- SRS NFR-04 s/d NFR-07",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Backend] Finalisasi & hardening API (security, validation, error handling)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nFinalisasi endpoint Admin dan Treasurer.\n\n## Tasks\n- [ ] POST /api/admin/providers/{id}/verify\n- [ ] GET /api/treasurer/transactions (dengan filter)\n- [ ] Middleware role guard: ADMIN, TREASURER\n- [ ] Response pagination untuk list transaksi\n- [ ] Pastikan semua endpoint terdokumentasi\n\n## Referensi\n- API Doc 5.7, SRS FR-25, FR-26",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfug",
+          "name": "module: admin",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Backend] Admin endpoints & Treasurer report (FR-25, FR-26)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPerbaikan visual dan pengalaman pengguna secara keseluruhan.\n\n## Tasks\n- [ ] Konsistensi warna, font, spacing di semua screen\n- [ ] Animasi transisi antar halaman\n- [ ] Splash screen & app icon\n- [ ] Handling offline state\n- [ ] Aksesibilitas (font size, contrast)\n- [ ] Test di berbagai ukuran layar Android\n\n## Referensi\n- SRS NFR-10 (Usability)",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Polish UI, responsiveness & UX improvements"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan seluruh flow Provider berjalan mulus.\n\n## Tasks\n- [ ] Test flow: Login Provider â†’ Lihat order masuk â†’ Terima\n- [ ] Test flow: Mulai kerja (IN_PROGRESS) setelah DP paid\n- [ ] Test flow: Input final_price â†’ Complete order\n- [ ] UI notifikasi in-app untuk Provider\n- [ ] Polish UI Provider screens\n\n## Referensi\n- Business Process 3.4 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Integrasi end-to-end flow Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPastikan seluruh flow Customer dari awal sampai akhir berjalan mulus.\n\n## Tasks\n- [ ] Test flow: Register â†’ Login â†’ Cari Provider â†’ Buat Order\n- [ ] Test flow: Bayar DP â†’ Tunggu Provider Accept â†’ Tunggu IN_PROGRESS\n- [ ] Test flow: Order COMPLETED â†’ Bayar Final â†’ CLOSED\n- [ ] Test flow: Beri Rating & Review\n- [ ] Fix navigasi antar screen\n- [ ] Handle semua error state (network error, expired token, dll)\n- [ ] Polish UI: loading state, empty state, error state\n\n## Referensi\n- Business Process 3.1 s/d 3.6",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtajA",
+          "name": "week-5 (8-14 Jun)",
+          "description": "Minggu 5",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Week 5 â€“ Frontend & Integrasi (8â€“14 Jun)",
+        "description": "Flutter screens, integrasi API, review & rating",
+        "dueOn": "2026-06-14T00:00:00Z"
+      },
+      "title": "[Frontend] Integrasi end-to-end flow Customer (Order â†’ Bayar DP â†’ Closed)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian alur pembayaran QRIS end-to-end dengan payment gateway sandbox.\n\n## Tasks\n- [ ] Test generate QRIS DP\n- [ ] Test webhook callback (simulasi PAID, FAILED, EXPIRED)\n- [ ] Test verifikasi signature webhook (valid & tampered)\n- [ ] Test otomasi closed order setelah Final PAID\n- [ ] Test timeout QR dan regenerate\n- [ ] Test notifikasi n8n terpicu sesuai event\n- [ ] Dokumentasikan hasil test\n\n## Referensi\n- API Doc 5.4, 5.5, SRS NFR-06",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfFA",
+          "name": "module: notification",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Testing] Testing Payment Flow & Webhook"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman rating, review, dan dashboard khusus Admin & Treasurer.\n\n## Tasks\n- [ ] UI Form Rating (bintang 1â€“5, kolom komentar)\n- [ ] Integrasi POST /api/orders/{id}/review\n- [ ] UI Dashboard Treasurer (list transaksi, filter date & type)\n- [ ] Integrasi GET /api/treasurer/transactions\n- [ ] UI Admin: list provider, tombol verifikasi\n- [ ] Integrasi POST /api/admin/providers/{id}/verify\n\n## Referensi\n- API Doc 5.6, 5.7, SRS FR-23 s/d FR-26",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfug",
+          "name": "module: admin",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Rating & Review + Dashboard Admin/Treasurer"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman pembayaran pelunasan setelah order COMPLETED.\n\n## Tasks\n- [ ] UI Halaman Bayar Final (detail harga final, sisa bayar)\n- [ ] Integrasi POST /api/payments/{final_id}/qris\n- [ ] Tampilkan QR pelunasan\n- [ ] Polling status pembayaran\n- [ ] Transisi ke 'Order Closed' setelah PAID\n- [ ] Tampilkan tombol Beri Rating setelah CLOSED\n\n## Referensi\n- API Doc 5.4, Business Process 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Pembayaran Pelunasan (QRIS Final)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman pembayaran DP dengan tampilan QR code.\n\n## Tasks\n- [ ] UI Halaman Bayar DP (informasi order, jumlah DP, QR code)\n- [ ] Integrasi POST /api/payments/{id}/qris\n- [ ] Tampilkan QR image dari qr_url\n- [ ] Timer countdown expiry QR\n- [ ] Polling GET /api/payments/{id} setiap 5 detik\n- [ ] Transisi ke 'DP Berhasil' setelah status PAID\n- [ ] Tombol regenerate QR jika expired\n\n## Referensi\n- API Doc 5.4, Business Process 3.3",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Pembayaran DP (QRIS)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSetup n8n dan integrasi event notifikasi ke WhatsApp/Email.\n\n## Tasks\n- [ ] Setup n8n container (sudah ada di docker-compose)\n- [ ] Buat workflow n8n untuk setiap event:\n  - order_created â†’ WA ke customer & provider\n  - order_accepted â†’ WA ke customer\n  - order_rejected â†’ WA ke customer\n  - dp_paid â†’ WA ke customer & provider\n  - order_completed â†’ WA ke customer (minta bayar pelunasan)\n  - final_paid â†’ WA ke semua\n- [ ] POST /api/integrations/n8n/events\n- [ ] Konfigurasi WA provider di n8n (Fonnte/Wablas/dll)\n- [ ] Catat ke notification_logs setiap pengiriman\n\n## Referensi\n- API Doc 5.5\n- SRS FR-21, FR-22\n- Component Diagram: Backend â†’ n8n â†’ WA/Email",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfFA",
+          "name": "module: notification",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Integrasi n8n â€“ Event Notifikasi (FR-21, FR-22)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint webhook untuk menerima callback dari payment gateway.\n\n## Tasks\n- [ ] POST /api/webhooks/payments (no auth, dengan signature verification)\n- [ ] Verifikasi signature/secret dari payment gateway (NFR-06)\n- [ ] Update Payment status: PAID / FAILED / EXPIRED\n- [ ] Jika DP PAID: trigger notifikasi event dp_paid\n- [ ] Jika Final PAID: update Order status â†’ CLOSED + trigger final_paid\n- [ ] Logging semua webhook ke notification_logs\n- [ ] Test webhook dengan ngrok / Midtrans simulator\n\n## Referensi\n- API Doc 5.4, SRS FR-17, FR-20\n- Business Rule 4: Webhook wajib verifikasi signature",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Webhook Payment Callback & Status Update (FR-17, FR-20)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nIntegrasi dengan Midtrans/Xendit sandbox untuk generate QRIS.\n\n## Tasks\n- [ ] Setup Midtrans/Xendit SDK di Laravel\n- [ ] POST /api/payments/{payment_id}/qris (generate QR)\n- [ ] Simpan external_payment_id & update status PENDING\n- [ ] GET /api/payments/{payment_id} (cek status)\n- [ ] Konfigurasi .env untuk API key sandbox\n- [ ] Handle QRIS expiry\n\n## Referensi\n- API Doc 5.4\n- SRS FR-16, FR-19, NFR-06",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtaOQ",
+          "name": "week-4 (1-7 Jun)",
+          "description": "Minggu 4",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "Week 4 â€“ Payment & Notifikasi (1â€“7 Jun)",
+        "description": "QRIS DP & Final, webhook, n8n integration",
+        "dueOn": "2026-06-07T00:00:00Z"
+      },
+      "title": "[Backend] Integrasi Payment Gateway QRIS â€“ Generate QR (FR-16, FR-19)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nRapat mingguan review progress, identifikasi blocker, dan update jadwal.\n\n## Tasks\n- [ ] Kumpulkan status update dari semua anggota\n- [ ] Update GitHub Project board\n- [ ] Identifikasi blocker & buat issue status: blocked\n- [ ] Notulen rapat (docs/notulen/)\n- [ ] Pastikan API Doc sudah sinkron dengan implementasi\n- [ ] Review PR yang pending",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[PM] Review progress Week 2 & koordinasi Week 3"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian menyeluruh alur order dari CREATED sampai CLOSED.\n\n## Tasks\n- [ ] Test POST /api/orders (valid & invalid)\n- [ ] Test accept/reject/start/complete/cancel\n- [ ] Test business rule: start tanpa DP PAID harus error\n- [ ] Test status transition yang tidak valid\n- [ ] Test review setelah CLOSED\n- [ ] Test review duplicate (harus error)\n- [ ] Catat semua bug\n\n## Referensi\n- SRS BR-01 s/d BR-03, FR-11 s/d FR-14",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Testing] Testing Order Lifecycle (Postman + Manual)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nFlow untuk Provider dalam mengelola order masuk.\n\n## Tasks\n- [ ] UI notifikasi order masuk untuk Provider\n- [ ] Tombol Terima / Tolak order\n- [ ] Integrasi POST /api/orders/{id}/accept & reject\n- [ ] Tombol Mulai Kerja (IN_PROGRESS)\n- [ ] Integrasi POST /api/orders/{id}/start\n- [ ] Handle error jika DP belum dibayar\n- [ ] Form input final_price + tombol Selesai\n- [ ] Integrasi POST /api/orders/{id}/complete\n\n## Referensi\n- API Doc 5.3, Business Process 3.4",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Provider â€“ Terima/Tolak & Mulai Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nHalaman detail order dengan status tracking dan riwayat semua order.\n\n## Tasks\n- [ ] UI Detail Order (status badge, info provider, jadwal, harga)\n- [ ] Status timeline/stepper (CREATED â†’ ACCEPTED â†’ IN_PROGRESS â†’ COMPLETED â†’ CLOSED)\n- [ ] Tombol aksi sesuai role & status (terima, tolak, mulai, selesai)\n- [ ] UI Riwayat Order (list dengan filter status)\n- [ ] Integrasi GET /api/orders & GET /api/orders/{id}\n- [ ] Pull-to-refresh\n\n## Referensi\n- API Doc 5.3, Business Process 3.2â€“3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Detail Order & Riwayat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi form pembuatan order oleh Customer.\n\n## Tasks\n- [ ] UI Form Order (pilih layanan, jadwal datetime picker, alamat, catatan)\n- [ ] Upload foto kerusakan (opsional)\n- [ ] Preview estimasi harga & DP yang akan dibayar\n- [ ] Integrasi POST /api/orders\n- [ ] Handle response: tampilkan order detail + tombol bayar DP\n- [ ] Validasi form client-side\n\n## Referensi\n- API Doc 5.3, SRS FR-11",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Form Buat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint review dan kalkulasi rata-rata rating provider.\n\n## Tasks\n- [ ] POST /api/orders/{id}/review (role: CUSTOMER, hanya jika CLOSED)\n- [ ] GET /api/providers/{id}/reviews\n- [ ] Update avg_rating di provider_profiles setelah review\n- [ ] Validasi: 1 order maksimal 1 review\n\n## Referensi\n- API Doc 5.6\n- SRS FR-23, FR-24",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Reviews & Rating (FR-23, FR-24)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nLogika bisnis pembuatan tagihan DP 50% otomatis saat order dibuat.\n\n## Tasks\n- [ ] Service: hitung DP = 50% dari estimated_price\n- [ ] Insert Payment record (type=DP, status=UNPAID) saat order CREATED\n- [ ] Auto-create Final Payment saat order COMPLETED\n- [ ] Hitung final_amount = final_price - dp_amount\n- [ ] Validasi: order CLOSED hanya jika Final PAID (BR-03)\n- [ ] Database transaction untuk atomicity (NFR-09)\n\n## Referensi\n- SRS BR-01, BR-02, BR-03\n- API Doc response POST /api/orders",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] Auto-create DP Payment saat Order dibuat (BR-01)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint order lengkap dengan semua transisi status.\n\n## Tasks\n- [ ] POST /api/orders (buat order + DP invoice otomatis)\n- [ ] GET /api/orders (list dengan filter)\n- [ ] GET /api/orders/{id}\n- [ ] POST /api/orders/{id}/accept (PROVIDER)\n- [ ] POST /api/orders/{id}/reject (PROVIDER)\n- [ ] POST /api/orders/{id}/start (cek DP PAID â€“ BR-02)\n- [ ] POST /api/orders/{id}/complete (input final_price)\n- [ ] POST /api/orders/{id}/cancel\n- [ ] POST /api/orders/{id}/attachments\n- [ ] Business rule: start hanya jika DP PAID\n\n## Referensi\n- API Doc 5.3\n- SRS FR-11 s/d FR-14, BR-01 s/d BR-03\n- Business Process 3.2 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Orders: CRUD & Status Lifecycle (FR-11 s/d FR-14)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nPengujian endpoint auth dan service catalog yang sudah selesai di Week 2.\n\n## Tasks\n- [ ] Test POST /api/auth/register (valid & invalid)\n- [ ] Test POST /api/auth/login (valid & invalid)\n- [ ] Test GET /api/categories\n- [ ] Test GET /api/providers (dengan berbagai filter)\n- [ ] Test GET /api/providers/{id}\n- [ ] Catat semua bug ke GitHub Issues\n- [ ] Verifikasi response sesuai API Doc\n\n## Referensi\n- API Doc 5.1 & 5.2",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Testing] Testing Auth & Service Catalog API (Postman)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi halaman daftar dan detail provider.\n\n## Tasks\n- [ ] UI Daftar Provider (list card: nama, rating, area, verified badge)\n- [ ] Fitur filter/search (category, keyword)\n- [ ] Integrasi GET /api/providers\n- [ ] UI Detail Provider (profil, layanan, rating)\n- [ ] Integrasi GET /api/providers/{id}\n- [ ] Tombol 'Pesan Sekarang'\n\n## Referensi\n- API Doc 5.2, SRS FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Daftar Provider & Detail Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi halaman home dan daftar kategori jasa.\n\n## Tasks\n- [ ] UI Home Screen (header, kategori grid, provider featured)\n- [ ] Integrasi GET /api/categories\n- [ ] UI Category List dengan icon\n- [ ] Navigasi ke daftar provider by kategori\n\n## Referensi\n- API Doc 5.2, Wireframe Week 1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Home & Daftar Kategori"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi UI dan integrasi API untuk Login & Register.\n\n## Tasks\n- [ ] UI Screen Login (email, password, tombol login)\n- [ ] UI Screen Register (name, email, phone, password, role selector)\n- [ ] Integrasi POST /api/auth/login\n- [ ] Integrasi POST /api/auth/register\n- [ ] Simpan token ke secure storage\n- [ ] Navigasi ke dashboard sesuai role\n- [ ] Handle error 401/422\n\n## Referensi\n- SRS 3.1, API Doc 5.1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Login & Register"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat semua Eloquent model dengan relasi sesuai Class Diagram.\n\n## Tasks\n- [ ] Model User (dengan role enum)\n- [ ] Model ProviderProfile (belongsTo User)\n- [ ] Model ServiceCategory\n- [ ] Model ProviderService\n- [ ] Model Order (belongsTo Customer, Provider, Service)\n- [ ] Model Payment (hasMany Order)\n- [ ] Model Review\n- [ ] Model NotificationLog\n- [ ] Factory & Faker untuk semua model\n\n## Referensi\n- docs/srs/CLASS_DIAGRAM_SPEC_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] Model & Eloquent Relationships"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint katalog jasa dan pencarian provider.\n\n## Tasks\n- [ ] GET /api/categories\n- [ ] GET /api/providers (dengan filter category_id, q, is_verified)\n- [ ] GET /api/providers/{provider_user_id}\n- [ ] POST /api/provider/profile (role: PROVIDER)\n- [ ] POST /api/provider/services\n- [ ] PATCH /api/provider/services/{id}\n- [ ] Seeder 5 kategori default\n\n## Referensi\n- API Doc 5.2\n- SRS FR-05, FR-08, FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Service Catalog: Categories & Provider List (FR-08, FR-09, FR-10)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nImplementasi endpoint autentikasi sesuai API Documentation section 5.1.\n\n## Tasks\n- [ ] POST /api/auth/register (customer & provider)\n- [ ] POST /api/auth/login (return token)\n- [ ] POST /api/auth/logout\n- [ ] Middleware role-based access (FR-04)\n- [ ] Password hashing (NFR-05)\n- [ ] Unit test auth endpoints\n\n## Acceptance Criteria\n- Register mengembalikan user_id & role\n- Login mengembalikan token valid\n- Endpoint protected menolak request tanpa token (401)\n\n## Referensi\n- API Doc 5.1\n- SRS FR-01 s/d FR-04",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Auth: Register, Login, Logout (FR-01, FR-02, FR-03)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSusun rencana pengujian mencakup semua fitur dari SRS.\n\n## Tasks\n- [ ] Identifikasi semua FR yang perlu diuji (FR-01 s/d FR-26)\n- [ ] Buat test case untuk happy path & edge case tiap fitur\n- [ ] Tentukan tools pengujian (Postman, Flutter test, dll)\n- [ ] Buat template bug report\n- [ ] Setup Postman Collection untuk API testing\n\n## Output\ndocs/testing/TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Testing] Buat Test Plan dokumen"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat wireframe untuk semua layar utama aplikasi.\n\n## Tasks\n- [ ] Wireframe: Login & Register\n- [ ] Wireframe: Home + Kategori\n- [ ] Wireframe: Daftar Provider & Detail\n- [ ] Wireframe: Form Buat Order\n- [ ] Wireframe: Detail Order & Status\n- [ ] Wireframe: Halaman Pembayaran (QR)\n- [ ] Wireframe: Rating & Review\n- [ ] Wireframe: Dashboard Admin/Treasurer\n\n## Referensi\n- SRS 3.1 User Interfaces",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Desain wireframe & UI kit (Figma)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nInisialisasi project Flutter dan setup arsitektur folder.\n\n## Tasks\n- [ ] Init Flutter project\n- [ ] Setup dependency: dio, provider/riverpod, go_router\n- [ ] Buat struktur folder (features, core, shared)\n- [ ] Setup base API service (base URL, auth interceptor)\n- [ ] Setup theme & color scheme\n- [ ] Push ke branch develop\n\n## Referensi\n- docs/srs/COMPONENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Setup Flutter project & struktur folder"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nBuat semua Laravel migration berdasarkan schema_mysql_tukangdekat.sql.\n\n## Tasks\n- [ ] Migration: users\n- [ ] Migration: provider_profiles\n- [ ] Migration: service_categories\n- [ ] Migration: provider_services\n- [ ] Migration: orders\n- [ ] Migration: payments\n- [ ] Migration: order_attachments\n- [ ] Migration: reviews\n- [ ] Migration: notification_logs\n- [ ] Buat seeders untuk data dummy kategori\n\n## Referensi\n- docs/database/schema_mysql_tukangdekat.sql",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Database migration sesuai schema MySQL"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nInisialisasi project Laravel dengan Docker Compose sesuai Deployment Diagram.\n\n## Tasks\n- [ ] Init Laravel 11 project\n- [ ] Buat docker-compose.yml (nginx, laravel-api, db, n8n)\n- [ ] Setup .env template\n- [ ] Konfigurasi database connection\n- [ ] Test docker-compose up berjalan\n- [ ] Push ke branch develop\n\n## Referensi\n- docs/srs/DEPLOYMENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Setup Laravel project & Docker environment"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSusun Work Breakdown Structure dan jadwal mingguan yang jelas untuk setiap anggota.\n\n## Tasks\n- [ ] Susun WBS berdasarkan SRS feature list\n- [ ] Bagi task per role (Backend/Frontend/Testing)\n- [ ] Set deadline per task di GitHub Issues\n- [ ] Buat tabel RACI (Responsible, Accountable, Consulted, Informed)\n\n## Output\nFile docs/management/WBS_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Buat WBS & jadwal detail per anggota"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nSetup GitHub Project (Kanban board) dengan kolom: Backlog, In Progress, Review, Done.\n\n## Tasks\n- [ ] Buat GitHub Project board\n- [ ] Konfigurasi kolom Kanban\n- [ ] Assign semua issues ke milestone yang sesuai\n- [ ] Sosialisasi cara penggunaan board ke tim\n- [ ] Buat template issue dan PR",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Setup GitHub Project Board & milestone tracking"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\nReview SRS v1.1, pastikan semua anggota tim memahami scope sistem.\n\n## Tasks\n- [ ] Review dan finalisasi SRS_TukangDekat_v1.1.md\n- [ ] Distribusikan dokumen ke semua anggota\n- [ ] Buat GitHub repo & project board\n- [ ] Setup branch strategy (main, develop, feature/*)\n- [ ] Buat dokumen CONTRIBUTING.md\n\n## Referensi\n- docs/srs/SRS_TukangDekat_v1.1.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Finalisasi SRS & distribusi dokumen ke tim"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nPengujian menyeluruh alur order dari CREATED sampai CLOSED.\\n\\n## Tasks\\n- [ ] Test POST /api/orders (valid & invalid)\\n- [ ] Test accept/reject/start/complete/cancel\\n- [ ] Test business rule: start tanpa DP PAID harus error\\n- [ ] Test status transition yang tidak valid\\n- [ ] Test review setelah CLOSED\\n- [ ] Test review duplicate (harus error)\\n- [ ] Catat semua bug\\n\\n## Referensi\\n- SRS BR-01 s/d BR-03, FR-11 s/d FR-14",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Testing] Testing Order Lifecycle (Postman + Manual)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nPengujian menyeluruh alur order dari CREATED sampai CLOSED.\\n\\n## Tasks\\n- [ ] Test POST /api/orders (valid & invalid)\\n- [ ] Test accept/reject/start/complete/cancel\\n- [ ] Test business rule: start tanpa DP PAID harus error\\n- [ ] Test status transition yang tidak valid\\n- [ ] Test review setelah CLOSED\\n- [ ] Test review duplicate (harus error)\\n- [ ] Catat semua bug\\n\\n## Referensi\\n- SRS BR-01 s/d BR-03, FR-11 s/d FR-14",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Testing] Testing Order Lifecycle (Postman + Manual)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nFlow untuk Provider dalam mengelola order masuk.\\n\\n## Tasks\\n- [ ] UI notifikasi order masuk untuk Provider\\n- [ ] Tombol Terima / Tolak order\\n- [ ] Integrasi POST /api/orders/{id}/accept & reject\\n- [ ] Tombol Mulai Kerja (IN_PROGRESS)\\n- [ ] Integrasi POST /api/orders/{id}/start\\n- [ ] Handle error jika DP belum dibayar\\n- [ ] Form input final_price + tombol Selesai\\n- [ ] Integrasi POST /api/orders/{id}/complete\\n\\n## Referensi\\n- API Doc 5.3, Business Process 3.4",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Provider â€“ Terima/Tolak & Mulai Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nFlow untuk Provider dalam mengelola order masuk.\\n\\n## Tasks\\n- [ ] UI notifikasi order masuk untuk Provider\\n- [ ] Tombol Terima / Tolak order\\n- [ ] Integrasi POST /api/orders/{id}/accept & reject\\n- [ ] Tombol Mulai Kerja (IN_PROGRESS)\\n- [ ] Integrasi POST /api/orders/{id}/start\\n- [ ] Handle error jika DP belum dibayar\\n- [ ] Form input final_price + tombol Selesai\\n- [ ] Integrasi POST /api/orders/{id}/complete\\n\\n## Referensi\\n- API Doc 5.3, Business Process 3.4",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Provider â€“ Terima/Tolak & Mulai Order"
+    },
+    {
+      "assignees": [],
+      "body": "Test",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        }
+      ],
+      "milestone": null,
+      "title": "Test with assignee"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nHalaman detail order dengan status tracking dan riwayat semua order.\\n\\n## Tasks\\n- [ ] UI Detail Order (status badge, info provider, jadwal, harga)\\n- [ ] Status timeline/stepper (CREATED â†’ ACCEPTED â†’ IN_PROGRESS â†’ COMPLETED â†’ CLOSED)\\n- [ ] Tombol aksi sesuai role & status (terima, tolak, mulai, selesai)\\n- [ ] UI Riwayat Order (list dengan filter status)\\n- [ ] Integrasi GET /api/orders & GET /api/orders/{id}\\n- [ ] Pull-to-refresh\\n\\n## Referensi\\n- API Doc 5.3, Business Process 3.2â€“3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Detail Order & Riwayat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nHalaman detail order dengan status tracking dan riwayat semua order.\\n\\n## Tasks\\n- [ ] UI Detail Order (status badge, info provider, jadwal, harga)\\n- [ ] Status timeline/stepper (CREATED â†’ ACCEPTED â†’ IN_PROGRESS â†’ COMPLETED â†’ CLOSED)\\n- [ ] Tombol aksi sesuai role & status (terima, tolak, mulai, selesai)\\n- [ ] UI Riwayat Order (list dengan filter status)\\n- [ ] Integrasi GET /api/orders & GET /api/orders/{id}\\n- [ ] Pull-to-refresh\\n\\n## Referensi\\n- API Doc 5.3, Business Process 3.2â€“3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Detail Order & Riwayat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi form pembuatan order oleh Customer.\\n\\n## Tasks\\n- [ ] UI Form Order (pilih layanan, jadwal datetime picker, alamat, catatan)\\n- [ ] Upload foto kerusakan (opsional)\\n- [ ] Preview estimasi harga & DP yang akan dibayar\\n- [ ] Integrasi POST /api/orders\\n- [ ] Handle response: tampilkan order detail + tombol bayar DP\\n- [ ] Validasi form client-side\\n\\n## Referensi\\n- API Doc 5.3, SRS FR-11",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Form Buat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi form pembuatan order oleh Customer.\\n\\n## Tasks\\n- [ ] UI Form Order (pilih layanan, jadwal datetime picker, alamat, catatan)\\n- [ ] Upload foto kerusakan (opsional)\\n- [ ] Preview estimasi harga & DP yang akan dibayar\\n- [ ] Integrasi POST /api/orders\\n- [ ] Handle response: tampilkan order detail + tombol bayar DP\\n- [ ] Validasi form client-side\\n\\n## Referensi\\n- API Doc 5.3, SRS FR-11",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Form Buat Order"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint review dan kalkulasi rata-rata rating provider.\\n\\n## Tasks\\n- [ ] POST /api/orders/{id}/review (role: CUSTOMER, hanya jika CLOSED)\\n- [ ] GET /api/providers/{id}/reviews\\n- [ ] Update avg_rating di provider_profiles setelah review\\n- [ ] Validasi: 1 order maksimal 1 review\\n\\n## Referensi\\n- API Doc 5.6\\n- SRS FR-23, FR-24",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Reviews & Rating (FR-23, FR-24)"
+    },
+    {
+      "assignees": [],
+      "body": "Test body",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        }
+      ],
+      "milestone": null,
+      "title": "Test Issue"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint review dan kalkulasi rata-rata rating provider.\\n\\n## Tasks\\n- [ ] POST /api/orders/{id}/review (role: CUSTOMER, hanya jika CLOSED)\\n- [ ] GET /api/providers/{id}/reviews\\n- [ ] Update avg_rating di provider_profiles setelah review\\n- [ ] Validasi: 1 order maksimal 1 review\\n\\n## Referensi\\n- API Doc 5.6\\n- SRS FR-23, FR-24",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtb6Q",
+          "name": "priority: medium",
+          "description": "Medium priority",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtfUw",
+          "name": "module: review",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Reviews & Rating (FR-23, FR-24)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nLogika bisnis pembuatan tagihan DP 50% otomatis saat order dibuat.\\n\\n## Tasks\\n- [ ] Service: hitung DP = 50% dari estimated_price\\n- [ ] Insert Payment record (type=DP, status=UNPAID) saat order CREATED\\n- [ ] Auto-create Final Payment saat order COMPLETED\\n- [ ] Hitung final_amount = final_price - dp_amount\\n- [ ] Validasi: order CLOSED hanya jika Final PAID (BR-03)\\n- [ ] Database transaction untuk atomicity (NFR-09)\\n\\n## Referensi\\n- SRS BR-01, BR-02, BR-03\\n- API Doc response POST /api/orders",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] Auto-create DP Payment saat Order dibuat (BR-01)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nLogika bisnis pembuatan tagihan DP 50% otomatis saat order dibuat.\\n\\n## Tasks\\n- [ ] Service: hitung DP = 50% dari estimated_price\\n- [ ] Insert Payment record (type=DP, status=UNPAID) saat order CREATED\\n- [ ] Auto-create Final Payment saat order COMPLETED\\n- [ ] Hitung final_amount = final_price - dp_amount\\n- [ ] Validasi: order CLOSED hanya jika Final PAID (BR-03)\\n- [ ] Database transaction untuk atomicity (NFR-09)\\n\\n## Referensi\\n- SRS BR-01, BR-02, BR-03\\n- API Doc response POST /api/orders",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtejg",
+          "name": "module: payment",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] Auto-create DP Payment saat Order dibuat (BR-01)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint order lengkap dengan semua transisi status.\\n\\n## Tasks\\n- [ ] POST /api/orders (buat order + DP invoice otomatis)\\n- [ ] GET /api/orders (list dengan filter)\\n- [ ] GET /api/orders/{id}\\n- [ ] POST /api/orders/{id}/accept (PROVIDER)\\n- [ ] POST /api/orders/{id}/reject (PROVIDER)\\n- [ ] POST /api/orders/{id}/start (cek DP PAID â€“ BR-02)\\n- [ ] POST /api/orders/{id}/complete (input final_price)\\n- [ ] POST /api/orders/{id}/cancel\\n- [ ] POST /api/orders/{id}/attachments\\n- [ ] Business rule: start hanya jika DP PAID\\n\\n## Referensi\\n- API Doc 5.3\\n- SRS FR-11 s/d FR-14, BR-01 s/d BR-03\\n- Business Process 3.2 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Orders: CRUD & Status Lifecycle (FR-11 s/d FR-14)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint order lengkap dengan semua transisi status.\\n\\n## Tasks\\n- [ ] POST /api/orders (buat order + DP invoice otomatis)\\n- [ ] GET /api/orders (list dengan filter)\\n- [ ] GET /api/orders/{id}\\n- [ ] POST /api/orders/{id}/accept (PROVIDER)\\n- [ ] POST /api/orders/{id}/reject (PROVIDER)\\n- [ ] POST /api/orders/{id}/start (cek DP PAID â€“ BR-02)\\n- [ ] POST /api/orders/{id}/complete (input final_price)\\n- [ ] POST /api/orders/{id}/cancel\\n- [ ] POST /api/orders/{id}/attachments\\n- [ ] Business rule: start hanya jika DP PAID\\n\\n## Referensi\\n- API Doc 5.3\\n- SRS FR-11 s/d FR-14, BR-01 s/d BR-03\\n- Business Process 3.2 s/d 3.5",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZ-w",
+          "name": "week-3 (25-31 Mei)",
+          "description": "Minggu 3",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjteUA",
+          "name": "module: order",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "Week 3 â€“ Core Feature Backend (25â€“31 Mei)",
+        "description": "Order, Provider, Service Catalog API",
+        "dueOn": "2026-05-31T00:00:00Z"
+      },
+      "title": "[Backend] API Orders: CRUD & Status Lifecycle (FR-11 s/d FR-14)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nPengujian endpoint auth dan service catalog yang sudah selesai di Week 2.\\n\\n## Tasks\\n- [ ] Test POST /api/auth/register (valid & invalid)\\n- [ ] Test POST /api/auth/login (valid & invalid)\\n- [ ] Test GET /api/categories\\n- [ ] Test GET /api/providers (dengan berbagai filter)\\n- [ ] Test GET /api/providers/{id}\\n- [ ] Catat semua bug ke GitHub Issues\\n- [ ] Verifikasi response sesuai API Doc\\n\\n## Referensi\\n- API Doc 5.1 & 5.2",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Testing] Testing Auth & Service Catalog API (Postman)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nPengujian endpoint auth dan service catalog yang sudah selesai di Week 2.\\n\\n## Tasks\\n- [ ] Test POST /api/auth/register (valid & invalid)\\n- [ ] Test POST /api/auth/login (valid & invalid)\\n- [ ] Test GET /api/categories\\n- [ ] Test GET /api/providers (dengan berbagai filter)\\n- [ ] Test GET /api/providers/{id}\\n- [ ] Catat semua bug ke GitHub Issues\\n- [ ] Verifikasi response sesuai API Doc\\n\\n## Referensi\\n- API Doc 5.1 & 5.2",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Testing] Testing Auth & Service Catalog API (Postman)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi halaman daftar dan detail provider.\\n\\n## Tasks\\n- [ ] UI Daftar Provider (list card: nama, rating, area, verified badge)\\n- [ ] Fitur filter/search (category, keyword)\\n- [ ] Integrasi GET /api/providers\\n- [ ] UI Detail Provider (profil, layanan, rating)\\n- [ ] Integrasi GET /api/providers/{id}\\n- [ ] Tombol 'Pesan Sekarang'\\n\\n## Referensi\\n- API Doc 5.2, SRS FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Daftar Provider & Detail Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi halaman daftar dan detail provider.\\n\\n## Tasks\\n- [ ] UI Daftar Provider (list card: nama, rating, area, verified badge)\\n- [ ] Fitur filter/search (category, keyword)\\n- [ ] Integrasi GET /api/providers\\n- [ ] UI Detail Provider (profil, layanan, rating)\\n- [ ] Integrasi GET /api/providers/{id}\\n- [ ] Tombol 'Pesan Sekarang'\\n\\n## Referensi\\n- API Doc 5.2, SRS FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Daftar Provider & Detail Provider"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi halaman home dan daftar kategori jasa.\\n\\n## Tasks\\n- [ ] UI Home Screen (header, kategori grid, provider featured)\\n- [ ] Integrasi GET /api/categories\\n- [ ] UI Category List dengan icon\\n- [ ] Navigasi ke daftar provider by kategori\\n\\n## Referensi\\n- API Doc 5.2, Wireframe Week 1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Home & Daftar Kategori"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi halaman home dan daftar kategori jasa.\\n\\n## Tasks\\n- [ ] UI Home Screen (header, kategori grid, provider featured)\\n- [ ] Integrasi GET /api/categories\\n- [ ] UI Category List dengan icon\\n- [ ] Navigasi ke daftar provider by kategori\\n\\n## Referensi\\n- API Doc 5.2, Wireframe Week 1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Home & Daftar Kategori"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi UI dan integrasi API untuk Login & Register.\\n\\n## Tasks\\n- [ ] UI Screen Login (email, password, tombol login)\\n- [ ] UI Screen Register (name, email, phone, password, role selector)\\n- [ ] Integrasi POST /api/auth/login\\n- [ ] Integrasi POST /api/auth/register\\n- [ ] Simpan token ke secure storage\\n- [ ] Navigasi ke dashboard sesuai role\\n- [ ] Handle error 401/422\\n\\n## Referensi\\n- SRS 3.1, API Doc 5.1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Login & Register"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi UI dan integrasi API untuk Login & Register.\\n\\n## Tasks\\n- [ ] UI Screen Login (email, password, tombol login)\\n- [ ] UI Screen Register (name, email, phone, password, role selector)\\n- [ ] Integrasi POST /api/auth/login\\n- [ ] Integrasi POST /api/auth/register\\n- [ ] Simpan token ke secure storage\\n- [ ] Navigasi ke dashboard sesuai role\\n- [ ] Handle error 401/422\\n\\n## Referensi\\n- SRS 3.1, API Doc 5.1",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Frontend] Screen: Login & Register"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat semua Eloquent model dengan relasi sesuai Class Diagram.\\n\\n## Tasks\\n- [ ] Model User (dengan role enum)\\n- [ ] Model ProviderProfile (belongsTo User)\\n- [ ] Model ServiceCategory\\n- [ ] Model ProviderService\\n- [ ] Model Order (belongsTo Customer, Provider, Service)\\n- [ ] Model Payment (hasMany Order)\\n- [ ] Model Review\\n- [ ] Model NotificationLog\\n- [ ] Factory & Faker untuk semua model\\n\\n## Referensi\\n- docs/srs/CLASS_DIAGRAM_SPEC_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] Model & Eloquent Relationships"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat semua Eloquent model dengan relasi sesuai Class Diagram.\\n\\n## Tasks\\n- [ ] Model User (dengan role enum)\\n- [ ] Model ProviderProfile (belongsTo User)\\n- [ ] Model ServiceCategory\\n- [ ] Model ProviderService\\n- [ ] Model Order (belongsTo Customer, Provider, Service)\\n- [ ] Model Payment (hasMany Order)\\n- [ ] Model Review\\n- [ ] Model NotificationLog\\n- [ ] Factory & Faker untuk semua model\\n\\n## Referensi\\n- docs/srs/CLASS_DIAGRAM_SPEC_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] Model & Eloquent Relationships"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint katalog jasa dan pencarian provider.\\n\\n## Tasks\\n- [ ] GET /api/categories\\n- [ ] GET /api/providers (dengan filter category_id, q, is_verified)\\n- [ ] GET /api/providers/{provider_user_id}\\n- [ ] POST /api/provider/profile (role: PROVIDER)\\n- [ ] POST /api/provider/services\\n- [ ] PATCH /api/provider/services/{id}\\n- [ ] Seeder 5 kategori default\\n\\n## Referensi\\n- API Doc 5.2\\n- SRS FR-05, FR-08, FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Service Catalog: Categories & Provider List (FR-08, FR-09, FR-10)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint katalog jasa dan pencarian provider.\\n\\n## Tasks\\n- [ ] GET /api/categories\\n- [ ] GET /api/providers (dengan filter category_id, q, is_verified)\\n- [ ] GET /api/providers/{provider_user_id}\\n- [ ] POST /api/provider/profile (role: PROVIDER)\\n- [ ] POST /api/provider/services\\n- [ ] PATCH /api/provider/services/{id}\\n- [ ] Seeder 5 kategori default\\n\\n## Referensi\\n- API Doc 5.2\\n- SRS FR-05, FR-08, FR-09, FR-10",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjte1Q",
+          "name": "module: provider",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Service Catalog: Categories & Provider List (FR-08, FR-09, FR-10)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint autentikasi sesuai API Documentation section 5.1.\\n\\n## Tasks\\n- [ ] POST /api/auth/register (customer & provider)\\n- [ ] POST /api/auth/login (return token)\\n- [ ] POST /api/auth/logout\\n- [ ] Middleware role-based access (FR-04)\\n- [ ] Password hashing (NFR-05)\\n- [ ] Unit test auth endpoints\\n\\n## Acceptance Criteria\\n- Register mengembalikan user_id & role\\n- Login mengembalikan token valid\\n- Endpoint protected menolak request tanpa token (401)\\n\\n## Referensi\\n- API Doc 5.1\\n- SRS FR-01 s/d FR-04",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Auth: Register, Login, Logout (FR-01, FR-02, FR-03)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nImplementasi endpoint autentikasi sesuai API Documentation section 5.1.\\n\\n## Tasks\\n- [ ] POST /api/auth/register (customer & provider)\\n- [ ] POST /api/auth/login (return token)\\n- [ ] POST /api/auth/logout\\n- [ ] Middleware role-based access (FR-04)\\n- [ ] Password hashing (NFR-05)\\n- [ ] Unit test auth endpoints\\n\\n## Acceptance Criteria\\n- Register mengembalikan user_id & role\\n- Login mengembalikan token valid\\n- Endpoint protected menolak request tanpa token (401)\\n\\n## Referensi\\n- API Doc 5.1\\n- SRS FR-01 s/d FR-04",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZqA",
+          "name": "week-2 (18-24 Mei)",
+          "description": "Minggu 2",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "Week 2 â€“ Auth & Fondasi API (18â€“24 Mei)",
+        "description": "Auth register/login, DB migration, Flutter project init",
+        "dueOn": "2026-05-24T00:00:00Z"
+      },
+      "title": "[Backend] API Auth: Register, Login, Logout (FR-01, FR-02, FR-03)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSusun rencana pengujian mencakup semua fitur dari SRS.\\n\\n## Tasks\\n- [ ] Identifikasi semua FR yang perlu diuji (FR-01 s/d FR-26)\\n- [ ] Buat test case untuk happy path & edge case tiap fitur\\n- [ ] Tentukan tools pengujian (Postman, Flutter test, dll)\\n- [ ] Buat template bug report\\n- [ ] Setup Postman Collection untuk API testing\\n\\n## Output\\ndocs/testing/TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Testing] Buat Test Plan dokumen"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSusun rencana pengujian mencakup semua fitur dari SRS.\\n\\n## Tasks\\n- [ ] Identifikasi semua FR yang perlu diuji (FR-01 s/d FR-26)\\n- [ ] Buat test case untuk happy path & edge case tiap fitur\\n- [ ] Tentukan tools pengujian (Postman, Flutter test, dll)\\n- [ ] Buat template bug report\\n- [ ] Setup Postman Collection untuk API testing\\n\\n## Output\\ndocs/testing/TEST_PLAN_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZJg",
+          "name": "role: Testing",
+          "description": "QA / Testing",
+          "color": "0e8a16"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgjw",
+          "name": "testing",
+          "description": "",
+          "color": "0e8a16"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Testing] Buat Test Plan dokumen"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat wireframe untuk semua layar utama aplikasi.\\n\\n## Tasks\\n- [ ] Wireframe: Login & Register\\n- [ ] Wireframe: Home + Kategori\\n- [ ] Wireframe: Daftar Provider & Detail\\n- [ ] Wireframe: Form Buat Order\\n- [ ] Wireframe: Detail Order & Status\\n- [ ] Wireframe: Halaman Pembayaran (QR)\\n- [ ] Wireframe: Rating & Review\\n- [ ] Wireframe: Dashboard Admin/Treasurer\\n\\n## Referensi\\n- SRS 3.1 User Interfaces",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Desain wireframe & UI kit (Figma)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat wireframe untuk semua layar utama aplikasi.\\n\\n## Tasks\\n- [ ] Wireframe: Login & Register\\n- [ ] Wireframe: Home + Kategori\\n- [ ] Wireframe: Daftar Provider & Detail\\n- [ ] Wireframe: Form Buat Order\\n- [ ] Wireframe: Detail Order & Status\\n- [ ] Wireframe: Halaman Pembayaran (QR)\\n- [ ] Wireframe: Rating & Review\\n- [ ] Wireframe: Dashboard Admin/Treasurer\\n\\n## Referensi\\n- SRS 3.1 User Interfaces",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtgCg",
+          "name": "module: UI/UX",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Desain wireframe & UI kit (Figma)"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nInisialisasi project Flutter dan setup arsitektur folder.\\n\\n## Tasks\\n- [ ] Init Flutter project\\n- [ ] Setup dependency: dio, provider/riverpod, go_router\\n- [ ] Buat struktur folder (features, core, shared)\\n- [ ] Setup base API service (base URL, auth interceptor)\\n- [ ] Setup theme & color scheme\\n- [ ] Push ke branch develop\\n\\n## Referensi\\n- docs/srs/COMPONENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Setup Flutter project & struktur folder"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nInisialisasi project Flutter dan setup arsitektur folder.\\n\\n## Tasks\\n- [ ] Init Flutter project\\n- [ ] Setup dependency: dio, provider/riverpod, go_router\\n- [ ] Buat struktur folder (features, core, shared)\\n- [ ] Setup base API service (base URL, auth interceptor)\\n- [ ] Setup theme & color scheme\\n- [ ] Push ke branch develop\\n\\n## Referensi\\n- docs/srs/COMPONENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYnA",
+          "name": "role: Frontend",
+          "description": "Frontend Developer",
+          "color": "d93f0b"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Frontend] Setup Flutter project & struktur folder"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat semua Laravel migration berdasarkan schema_mysql_tukangdekat.sql.\\n\\n## Tasks\\n- [ ] Migration: users\\n- [ ] Migration: provider_profiles\\n- [ ] Migration: service_categories\\n- [ ] Migration: provider_services\\n- [ ] Migration: orders\\n- [ ] Migration: payments\\n- [ ] Migration: order_attachments\\n- [ ] Migration: reviews\\n- [ ] Migration: notification_logs\\n- [ ] Buat seeders untuk data dummy kategori\\n\\n## Referensi\\n- docs/database/schema_mysql_tukangdekat.sql",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Database migration sesuai schema MySQL"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nBuat semua Laravel migration berdasarkan schema_mysql_tukangdekat.sql.\\n\\n## Tasks\\n- [ ] Migration: users\\n- [ ] Migration: provider_profiles\\n- [ ] Migration: service_categories\\n- [ ] Migration: provider_services\\n- [ ] Migration: orders\\n- [ ] Migration: payments\\n- [ ] Migration: order_attachments\\n- [ ] Migration: reviews\\n- [ ] Migration: notification_logs\\n- [ ] Buat seeders untuk data dummy kategori\\n\\n## Referensi\\n- docs/database/schema_mysql_tukangdekat.sql",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtdfw",
+          "name": "module: auth",
+          "description": "",
+          "color": "c5def5"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Database migration sesuai schema MySQL"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nInisialisasi project Laravel dengan Docker Compose sesuai Deployment Diagram.\\n\\n## Tasks\\n- [ ] Init Laravel 11 project\\n- [ ] Buat docker-compose.yml (nginx, laravel-api, db, n8n)\\n- [ ] Setup .env template\\n- [ ] Konfigurasi database connection\\n- [ ] Test docker-compose up berjalan\\n- [ ] Push ke branch develop\\n\\n## Referensi\\n- docs/srs/DEPLOYMENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Setup Laravel project & Docker environment"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nInisialisasi project Laravel dengan Docker Compose sesuai Deployment Diagram.\\n\\n## Tasks\\n- [ ] Init Laravel 11 project\\n- [ ] Buat docker-compose.yml (nginx, laravel-api, db, n8n)\\n- [ ] Setup .env template\\n- [ ] Konfigurasi database connection\\n- [ ] Test docker-compose up berjalan\\n- [ ] Push ke branch develop\\n\\n## Referensi\\n- docs/srs/DEPLOYMENT_DIAGRAM_TukangDekat_v1.0.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtYLw",
+          "name": "role: Backend",
+          "description": "Backend Developer",
+          "color": "e4e669"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[Backend] Setup Laravel project & Docker environment"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSusun Work Breakdown Structure dan jadwal mingguan yang jelas untuk setiap anggota.\\n\\n## Tasks\\n- [ ] Susun WBS berdasarkan SRS feature list\\n- [ ] Bagi task per role (Backend/Frontend/Testing)\\n- [ ] Set deadline per task di GitHub Issues\\n- [ ] Buat tabel RACI (Responsible, Accountable, Consulted, Informed)\\n\\n## Output\\nFile docs/management/WBS_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Buat WBS & jadwal detail per anggota"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSusun Work Breakdown Structure dan jadwal mingguan yang jelas untuk setiap anggota.\\n\\n## Tasks\\n- [ ] Susun WBS berdasarkan SRS feature list\\n- [ ] Bagi task per role (Backend/Frontend/Testing)\\n- [ ] Set deadline per task di GitHub Issues\\n- [ ] Buat tabel RACI (Responsible, Accountable, Consulted, Informed)\\n\\n## Output\\nFile docs/management/WBS_TukangDekat.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Buat WBS & jadwal detail per anggota"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSetup GitHub Project (Kanban board) dengan kolom: Backlog, In Progress, Review, Done.\\n\\n## Tasks\\n- [ ] Buat GitHub Project board\\n- [ ] Konfigurasi kolom Kanban\\n- [ ] Assign semua issues ke milestone yang sesuai\\n- [ ] Sosialisasi cara penggunaan board ke tim\\n- [ ] Buat template issue dan PR",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Setup GitHub Project Board & milestone tracking"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nSetup GitHub Project (Kanban board) dengan kolom: Backlog, In Progress, Review, Done.\\n\\n## Tasks\\n- [ ] Buat GitHub Project board\\n- [ ] Konfigurasi kolom Kanban\\n- [ ] Assign semua issues ke milestone yang sesuai\\n- [ ] Sosialisasi cara penggunaan board ke tim\\n- [ ] Buat template issue dan PR",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Setup GitHub Project Board & milestone tracking"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nReview SRS v1.1, pastikan semua anggota tim memahami scope sistem.\\n\\n## Tasks\\n- [ ] Review dan finalisasi SRS_TukangDekat_v1.1.md\\n- [ ] Distribusikan dokumen ke semua anggota\\n- [ ] Buat GitHub repo & project board\\n- [ ] Setup branch strategy (main, develop, feature/*)\\n- [ ] Buat dokumen CONTRIBUTING.md\\n\\n## Referensi\\n- docs/srs/SRS_TukangDekat_v1.1.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Finalisasi SRS & distribusi dokumen ke tim"
+    },
+    {
+      "assignees": [],
+      "body": "## Deskripsi\\nReview SRS v1.1, pastikan semua anggota tim memahami scope sistem.\\n\\n## Tasks\\n- [ ] Review dan finalisasi SRS_TukangDekat_v1.1.md\\n- [ ] Distribusikan dokumen ke semua anggota\\n- [ ] Buat GitHub repo & project board\\n- [ ] Setup branch strategy (main, develop, feature/*)\\n- [ ] Buat dokumen CONTRIBUTING.md\\n\\n## Referensi\\n- docs/srs/SRS_TukangDekat_v1.1.md",
+      "labels": [
+        {
+          "id": "LA_kwDORxFZws8AAAACc00eVA",
+          "name": "documentation",
+          "description": "Improvements or additions to documentation",
+          "color": "0052cc"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtVmQ",
+          "name": "role: PM",
+          "description": "Project Manager",
+          "color": "0075ca"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtZcQ",
+          "name": "week-1 (11-17 Mei)",
+          "description": "Minggu 1",
+          "color": "bfd4f2"
+        },
+        {
+          "id": "LA_kwDORxFZws8AAAACjjtbTg",
+          "name": "priority: high",
+          "description": "High priority",
+          "color": "b60205"
+        }
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "Week 1 â€“ Setup & Perencanaan (11â€“17 Mei)",
+        "description": "Environment setup, pembagian tugas, wireframe awal",
+        "dueOn": "2026-05-17T00:00:00Z"
+      },
+      "title": "[PM] Finalisasi SRS & distribusi dokumen ke tim"
+    }
+  ]
+}
