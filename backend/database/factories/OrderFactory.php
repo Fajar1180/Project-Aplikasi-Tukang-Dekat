@@ -15,11 +15,19 @@ class OrderFactory extends Factory
 
   public function definition(): array
   {
+<<<<<<< HEAD
     $customer = User::factory()->create(['role' => 'CUSTOMER']);
     $provider = User::factory()->create(['role' => 'PROVIDER']);
 
     return [
       'order_code' => 'ORD-' . now()->format('Ymd') . '-' . rand(1000, 9999),
+=======
+    $customer = User::factory()->customer()->create();
+    $provider = User::factory()->provider()->create();
+
+    return [
+      'order_code' => 'ORD-' . now()->format('Ymd') . '-' . str_pad(rand(1, 9999), 4, '0', STR_PAD_LEFT),
+>>>>>>> repo-b/main
       'customer_id' => $customer->id,
       'provider_id' => $provider->id,
       'category_id' => null,
@@ -32,4 +40,48 @@ class OrderFactory extends Factory
       'status' => 'CREATED',
     ];
   }
+<<<<<<< HEAD
+=======
+
+  /**
+   * Create an order in ASSIGNED status.
+   */
+  public function assigned(): static
+  {
+    return $this->state(fn (array $attributes) => [
+      'status' => 'ASSIGNED',
+    ]);
+  }
+
+  /**
+   * Create an order in STARTED status.
+   */
+  public function started(): static
+  {
+    return $this->state(fn (array $attributes) => [
+      'status' => 'STARTED',
+    ]);
+  }
+
+  /**
+   * Create a completed order with final_price set.
+   */
+  public function completed(): static
+  {
+    return $this->state(fn (array $attributes) => [
+      'status' => 'COMPLETED',
+      'final_price' => $attributes['estimated_price'] ?? $this->faker->numberBetween(50000, 200000),
+    ]);
+  }
+
+  /**
+   * Create a cancelled order.
+   */
+  public function cancelled(): static
+  {
+    return $this->state(fn (array $attributes) => [
+      'status' => 'CANCELLED',
+    ]);
+  }
+>>>>>>> repo-b/main
 }

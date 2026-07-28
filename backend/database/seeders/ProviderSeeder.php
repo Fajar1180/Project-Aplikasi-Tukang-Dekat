@@ -6,8 +6,18 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\ProviderProfile;
 use App\Models\ProviderService;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
 
+=======
+use App\Models\ProviderCoverage;
+use App\Models\ServiceCategory;
+use App\Models\WilayahKota;
+use App\Models\WilayahKecamatan;
+use Illuminate\Support\Facades\Hash;
+
+
+>>>>>>> repo-b/main
 class ProviderSeeder extends Seeder
 {
   /**
@@ -29,7 +39,12 @@ class ProviderSeeder extends Seeder
           'area' => 'Bojongloa Kaler',
           'address' => 'Jl. Merdeka No. 123',
         ],
+<<<<<<< HEAD
         'category_ids' => [1],
+=======
+        'coverage_city' => 'Bandung',
+        'category_ids' => ['Listrik'],
+>>>>>>> repo-b/main
       ],
       [
         'user' => [
@@ -43,7 +58,12 @@ class ProviderSeeder extends Seeder
           'area' => 'Bojongloa Kaler',
           'address' => 'Jl. Ahmad Yani No. 456',
         ],
+<<<<<<< HEAD
         'category_ids' => [2],
+=======
+        'coverage_city' => 'Bandung',
+        'category_ids' => ['Plumbing'],
+>>>>>>> repo-b/main
       ],
       [
         'user' => [
@@ -57,7 +77,12 @@ class ProviderSeeder extends Seeder
           'area' => 'Bojongloa Kaler',
           'address' => 'Jl. Sudirman No. 789',
         ],
+<<<<<<< HEAD
         'category_ids' => [3],
+=======
+        'coverage_city' => 'Bandung',
+        'category_ids' => ['AC'],
+>>>>>>> repo-b/main
       ],
     ];
 
@@ -66,6 +91,7 @@ class ProviderSeeder extends Seeder
       $userData = $providerData['user'];
       $profileData = $providerData['profile'];
 
+<<<<<<< HEAD
       // Create user
       $user = User::create(array_merge($userData, [
         'password' => Hash::make('password123'),
@@ -90,6 +116,65 @@ class ProviderSeeder extends Seeder
           'price_unit' => 'per kunjungan',
           'is_active' => true,
         ]);
+=======
+      // Create or update user by unique email
+      $user = User::updateOrCreate(
+        ['email' => $userData['email']],
+        array_merge($userData, [
+          'password' => Hash::make('password123'),
+          'role' => 'PROVIDER',
+          'status' => 'ACTIVE',
+        ])
+      );
+
+      // Create or update provider profile
+      $profile = ProviderProfile::updateOrCreate(
+        ['user_id' => $user->id],
+        array_merge($profileData, [
+          'is_verified' => true,
+          'is_active' => true,
+          'avg_rating' => 0,
+        ])
+      );
+
+      // Create or update services to keep them active
+      foreach ($categoryIds as $categoryName) {
+        $category = ServiceCategory::where('name', $categoryName)->first();
+        if (!$category) {
+          // If categories haven't been seeded (or name mismatch), skip to avoid FK violation
+          continue;
+        }
+
+        ProviderService::updateOrCreate(
+          [
+            'provider_profile_id' => $profile->id,
+            'category_id' => $category->id,
+            'name' => 'Service Standard',
+          ],
+          [
+            'base_price' => 150000,
+            'price_unit' => 'per kunjungan',
+            'is_active' => true,
+          ],
+        );
+      }
+
+      // Provider contoh beroperasi di Bandung. Simpan cakupan kecamatan agar
+      // pencarian customer berdasarkan kota/kecamatan memakai data yang sama
+      // dengan validasi saat membuat order.
+      $city = WilayahKota::where('name', $providerData['coverage_city'])->first();
+      if ($city) {
+        $districts = WilayahKecamatan::where('kota_id', $city->id)->get();
+        foreach ($districts as $district) {
+          ProviderCoverage::updateOrCreate(
+            [
+              'provider_profile_id' => $profile->id,
+              'kecamatan_id' => $district->id,
+            ],
+            ['is_active' => true],
+          );
+        }
+>>>>>>> repo-b/main
       }
     }
   }

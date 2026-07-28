@@ -12,6 +12,10 @@ class ServiceCategory extends Model
 
   protected $fillable = [
     'name',
+<<<<<<< HEAD
+=======
+    'damage_severity',
+>>>>>>> repo-b/main
     'description',
     'is_active',
   ];

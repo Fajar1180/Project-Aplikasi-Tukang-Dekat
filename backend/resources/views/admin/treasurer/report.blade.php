@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 @extends('welcome')
+=======
+@extends('layouts.admin')
+@section('title', 'Laporan Bendahara - Admin')
+>>>>>>> repo-b/main
 
 @section('content')
     <div class="max-w-6xl mx-auto p-6">
@@ -60,7 +65,15 @@
         <div id="pagination" class="flex justify-center gap-2 mt-4 mb-6"></div>
     </div>
 
+<<<<<<< HEAD
     <script>
+=======
+    @endsection
+
+
+@push('scripts')
+<script>
+>>>>>>> repo-b/main
         // Format currency IDR
         function formatCurrency(value) {
             return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(value);
@@ -204,4 +217,8 @@
         // Initial load
         load();
     </script>
+<<<<<<< HEAD
 @endsection
+=======
+@endpush
+>>>>>>> repo-b/main

@@ -21,4 +21,8 @@
 /vendor
 Homestead.json
 Homestead.yaml
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> repo-b/main

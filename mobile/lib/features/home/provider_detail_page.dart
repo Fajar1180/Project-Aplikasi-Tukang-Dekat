@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+<<<<<<< HEAD
+=======
+import '../auth/auth_controller.dart';
+import '../../shared/widgets/osm_map_preview.dart';
+>>>>>>> repo-b/main
 import 'catalog_providers.dart';
 import 'create_order_page.dart';
 
@@ -20,6 +25,7 @@ class ProviderDetailPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: const Text('Detail Teknisi'),
       ),
       body: providerAsync.when(
@@ -29,6 +35,20 @@ class ProviderDetailPage extends ConsumerWidget {
           child: Text('Error: $err'),
         ),
         data: (provider) {
+=======
+        title: const Text('Profil Teknisi'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          tooltip: 'Kembali',
+          onPressed: () => Navigator.of(context).maybePop(),
+        ),
+      ),
+      body: providerAsync.when(
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (err, st) => Center(child: Text('Error: $err')),
+        data: (provider) {
+          final isBusy = provider.availabilityStatus == 'BUSY';
+>>>>>>> repo-b/main
           return SingleChildScrollView(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -38,6 +58,7 @@ class ProviderDetailPage extends ConsumerWidget {
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16),
+<<<<<<< HEAD
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -93,6 +114,180 @@ class ProviderDetailPage extends ConsumerWidget {
                           ],
                         ),
                       ],
+=======
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        final compact = constraints.maxWidth < 420;
+                        final statusChip = Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: isBusy
+                                ? Colors.orange.shade50
+                                : Colors.green.shade50,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            isBusy ? 'Sedang dipesan' : 'Tersedia',
+                            style: TextStyle(
+                              color: isBusy
+                                  ? Colors.orange.shade800
+                                  : Colors.green.shade700,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        );
+
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (compact)
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      const CircleAvatar(
+                                        radius: 34,
+                                        child: Icon(Icons.person, size: 34),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              provider.businessName,
+                                              style: Theme.of(
+                                                context,
+                                              ).textTheme.titleLarge,
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Wrap(
+                                              spacing: 8,
+                                              runSpacing: 6,
+                                              crossAxisAlignment:
+                                                  WrapCrossAlignment.center,
+                                              children: [
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    const Icon(
+                                                      Icons.star,
+                                                      size: 16,
+                                                      color: Colors.amber,
+                                                    ),
+                                                    const SizedBox(width: 4),
+                                                    Text(
+                                                      provider.avgRating
+                                                          .toStringAsFixed(1),
+                                                      style: Theme.of(
+                                                        context,
+                                                      ).textTheme.bodyMedium,
+                                                    ),
+                                                  ],
+                                                ),
+                                                if (provider.isVerified)
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      const Icon(
+                                                        Icons.verified,
+                                                        size: 16,
+                                                        color: Colors.green,
+                                                      ),
+                                                      const SizedBox(width: 4),
+                                                      Text(
+                                                        'Terverifikasi',
+                                                        style: Theme.of(
+                                                          context,
+                                                        ).textTheme.bodySmall,
+                                                      ),
+                                                    ],
+                                                  ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10),
+                                  statusChip,
+                                ],
+                              )
+                            else
+                              Row(
+                                children: [
+                                  const CircleAvatar(
+                                    radius: 40,
+                                    child: Icon(Icons.person, size: 40),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          provider.businessName,
+                                          style: Theme.of(
+                                            context,
+                                          ).textTheme.titleLarge,
+                                        ),
+                                        const SizedBox(height: 4),
+                                        Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.star,
+                                              size: 16,
+                                              color: Colors.amber,
+                                            ),
+                                            const SizedBox(width: 4),
+                                            Text(
+                                              provider.avgRating
+                                                  .toStringAsFixed(1),
+                                              style: Theme.of(
+                                                context,
+                                              ).textTheme.bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 4),
+                                        if (provider.isVerified)
+                                          Row(
+                                            children: [
+                                              const Icon(
+                                                Icons.verified,
+                                                size: 16,
+                                                color: Colors.green,
+                                              ),
+                                              const SizedBox(width: 4),
+                                              Text(
+                                                'Terverifikasi',
+                                                style: Theme.of(
+                                                  context,
+                                                ).textTheme.bodySmall,
+                                              ),
+                                            ],
+                                          ),
+                                        const SizedBox(height: 8),
+                                        statusChip,
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                          ],
+                        );
+                      },
+>>>>>>> repo-b/main
                     ),
                   ),
                 ),
@@ -107,6 +302,40 @@ class ProviderDetailPage extends ConsumerWidget {
                 _buildInfoRow('Deskripsi', provider.description ?? '-'),
                 _buildInfoRow('Area', provider.area ?? '-'),
                 _buildInfoRow('Alamat', provider.address ?? '-'),
+<<<<<<< HEAD
+=======
+                const SizedBox(height: 12),
+                if (provider.coverages.isNotEmpty) ...[
+                  Text(
+                    'Wilayah Layanan',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: provider.coverages
+                        .where((coverage) => coverage.isActive)
+                        .map(
+                          (coverage) => Chip(
+                            label: Text(
+                              coverage.kotaName != null &&
+                                      coverage.kotaName!.isNotEmpty
+                                  ? '${coverage.kotaName} - ${coverage.kecamatanName}'
+                                  : coverage.kecamatanName,
+                            ),
+                          ),
+                        )
+                        .toList(),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+                OsmMapPreview(
+                  providerLatitude: provider.latitude,
+                  providerLongitude: provider.longitude,
+                  providerLabel: provider.businessName,
+                ),
+>>>>>>> repo-b/main
 
                 const SizedBox(height: 24),
 
@@ -127,15 +356,25 @@ class ProviderDetailPage extends ConsumerWidget {
                         itemBuilder: (context, index) {
                           final service = provider.services[index];
                           return Card(
+<<<<<<< HEAD
                             margin: const EdgeInsets.only(bottom: 8),
                             child: Padding(
                               padding: const EdgeInsets.all(12),
+=======
+                            margin: const EdgeInsets.only(bottom: 12),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+>>>>>>> repo-b/main
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     service.name,
                                     style: const TextStyle(
+<<<<<<< HEAD
                                         fontWeight: FontWeight.bold),
                                   ),
                                   const SizedBox(height: 4),
@@ -146,6 +385,23 @@ class ProviderDetailPage extends ConsumerWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
+=======
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    service.description?.trim().isNotEmpty ==
+                                            true
+                                        ? service.description!
+                                        : 'Deskripsi layanan belum tersedia.',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(fontSize: 13),
+                                  ),
+>>>>>>> repo-b/main
                                 ],
                               ),
                             ),
@@ -194,7 +450,12 @@ class ProviderDetailPage extends ConsumerWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(
+<<<<<<< HEAD
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+=======
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+>>>>>>> repo-b/main
                                       children: [
                                         Text(
                                           review.customerName ?? 'Pelanggan',
@@ -203,7 +464,13 @@ class ProviderDetailPage extends ConsumerWidget {
                                           ),
                                         ),
                                         Row(
+<<<<<<< HEAD
                                           children: List.generate(5, (starIndex) {
+=======
+                                          children: List.generate(5, (
+                                            starIndex,
+                                          ) {
+>>>>>>> repo-b/main
                                             return Icon(
                                               starIndex < review.rating
                                                   ? Icons.star
@@ -232,6 +499,7 @@ class ProviderDetailPage extends ConsumerWidget {
                 ),
 
                 // CTA Button
+<<<<<<< HEAD
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -249,6 +517,47 @@ class ProviderDetailPage extends ConsumerWidget {
                     child: const Text('Pesan Sekarang'),
                   ),
                 ),
+=======
+                if (ref.watch(authControllerProvider).userRole != 'ADMIN')
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (isBusy) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                'Provider sedang dipesan pelanggan lain. Anda tetap bisa membuat antrian, tetapi provider mungkin mengarahkan ke penyedia lain.',
+                              ),
+                            ),
+                          );
+                        }
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => CreateOrderPage(
+                              providerId: provider.userId ?? providerId,
+                              categoryId: categoryId,
+                              services: provider.services,
+                              coverages: provider.coverages,
+                            ),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size.fromHeight(48),
+                      ),
+                      child: const Text('Pesan Sekarang'),
+                    ),
+                  ),
+                if (ref.watch(authControllerProvider).userRole == 'ADMIN')
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: Text(
+                      'Akses hanya untuk admin: silakan gunakan menu Admin untuk manajemen dan verifikasi.',
+                      style: TextStyle(color: Colors.black54, fontSize: 14),
+                    ),
+                  ),
+>>>>>>> repo-b/main
               ],
             ),
           );

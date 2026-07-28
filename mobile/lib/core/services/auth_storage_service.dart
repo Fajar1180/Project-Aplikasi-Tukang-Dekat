@@ -5,12 +5,23 @@ class AuthStorageService {
   final FlutterSecureStorage _storage;
 
   AuthStorageService({required FlutterSecureStorage storage})
+<<<<<<< HEAD
       : _storage = storage;
+=======
+    : _storage = storage;
+>>>>>>> repo-b/main
 
   static const String _tokenKey = 'auth_token';
   static const String _userIdKey = 'user_id';
   static const String _userRoleKey = 'user_role';
   static const String _userEmailKey = 'user_email';
+<<<<<<< HEAD
+=======
+  static const String _userFullNameKey = 'user_full_name';
+  static const String _userPhoneNumberKey = 'user_phone_number';
+  static const String _userProfilePhotoPathKey = 'user_profile_photo_path';
+  static const String _userProviderStatusKey = 'user_provider_status';
+>>>>>>> repo-b/main
 
   // Save token
   Future<void> saveToken(String token) async {
@@ -27,10 +38,47 @@ class AuthStorageService {
     required int userId,
     required String userRole,
     required String userEmail,
+<<<<<<< HEAD
+=======
+    String? providerStatus,
+    String? fullName,
+    String? phoneNumber,
+    String? profilePhotoPath,
+>>>>>>> repo-b/main
   }) async {
     await _storage.write(key: _userIdKey, value: userId.toString());
     await _storage.write(key: _userRoleKey, value: userRole);
     await _storage.write(key: _userEmailKey, value: userEmail);
+<<<<<<< HEAD
+=======
+
+    if (providerStatus != null) {
+      await _storage.write(key: _userProviderStatusKey, value: providerStatus);
+    } else {
+      await _storage.delete(key: _userProviderStatusKey);
+    }
+
+    if (fullName != null) {
+      await _storage.write(key: _userFullNameKey, value: fullName);
+    } else {
+      await _storage.delete(key: _userFullNameKey);
+    }
+
+    if (phoneNumber != null) {
+      await _storage.write(key: _userPhoneNumberKey, value: phoneNumber);
+    } else {
+      await _storage.delete(key: _userPhoneNumberKey);
+    }
+
+    if (profilePhotoPath != null) {
+      await _storage.write(
+        key: _userProfilePhotoPathKey,
+        value: profilePhotoPath,
+      );
+    } else {
+      await _storage.delete(key: _userProfilePhotoPathKey);
+    }
+>>>>>>> repo-b/main
   }
 
   // Get user ID
@@ -49,6 +97,28 @@ class AuthStorageService {
     return await _storage.read(key: _userEmailKey);
   }
 
+<<<<<<< HEAD
+=======
+  // Get user full name
+  Future<String?> getUserFullName() async {
+    return await _storage.read(key: _userFullNameKey);
+  }
+
+  // Get user phone number
+  Future<String?> getUserPhoneNumber() async {
+    return await _storage.read(key: _userPhoneNumberKey);
+  }
+
+  Future<String?> getUserProviderStatus() async {
+    return await _storage.read(key: _userProviderStatusKey);
+  }
+
+  // Get user profile photo path
+  Future<String?> getUserProfilePhotoPath() async {
+    return await _storage.read(key: _userProfilePhotoPathKey);
+  }
+
+>>>>>>> repo-b/main
   // Clear all
   Future<void> clearAll() async {
     await _storage.deleteAll();

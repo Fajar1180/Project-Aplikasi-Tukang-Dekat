@@ -7,6 +7,10 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+>>>>>>> repo-b/main
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -25,9 +29,21 @@ class User extends Authenticatable
         'name',
         'email',
         'phone',
+<<<<<<< HEAD
         'password',
         'role',
         'status',
+=======
+        'phone_number',
+        'full_name',
+        'profile_photo_path',
+        'password',
+        'role',
+        'status',
+        'city_id',
+        'district_id',
+        'provider_status',
+>>>>>>> repo-b/main
     ];
 
     /**
@@ -58,6 +74,19 @@ class User extends Authenticatable
         return $this->hasOne(ProviderProfile::class);
     }
 
+<<<<<<< HEAD
+=======
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(WilayahKota::class, 'city_id');
+    }
+
+    public function district(): BelongsTo
+    {
+        return $this->belongsTo(WilayahKecamatan::class, 'district_id');
+    }
+
+>>>>>>> repo-b/main
     public function customerOrders(): HasMany
     {
         return $this->hasMany(Order::class, 'customer_id');
@@ -67,4 +96,22 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class, 'provider_id');
     }
+<<<<<<< HEAD
+=======
+
+    public function customerReviews(): HasMany
+    {
+        return $this->hasMany(Review::class, 'customer_id');
+    }
+
+    public function providerReviews(): HasMany
+    {
+        return $this->hasMany(Review::class, 'provider_id');
+    }
+
+    public function payouts(): HasMany
+    {
+        return $this->hasMany(ProviderPayout::class, 'provider_id');
+    }
+>>>>>>> repo-b/main
 }

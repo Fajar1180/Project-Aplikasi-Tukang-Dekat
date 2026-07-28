@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
 <head>
@@ -9,6 +10,14 @@
 </head>
 <body class="bg-gray-50">
   <div class="max-w-4xl mx-auto p-6">
+=======
+@extends('layouts.admin')
+
+@section('title', 'Payout Detail')
+
+@section('content')
+<div class="max-w-4xl mx-auto p-6">
+>>>>>>> repo-b/main
     <h1 class="text-2xl font-bold mb-4">Payout #{{ $p->id }} - {{ optional($p->provider)->name }}</h1>
     <div class="bg-white p-4 rounded shadow mb-4">
       <div>Jumlah: Rp {{ number_format($p->amount,0,',','.') }}</div>
@@ -35,8 +44,15 @@
       </table>
     </div>
   </div>
+<<<<<<< HEAD
 
   <script>
+=======
+@endsection
+
+@push('scripts')
+<script>
+>>>>>>> repo-b/main
     function csrfToken(){ return document.querySelector('meta[name="csrf-token"]').getAttribute('content'); }
     document.getElementById('retryBtn')?.addEventListener('click', async function(){
       if (!confirm('Retry payout?')) return;
@@ -47,5 +63,9 @@
       alert('Retry dispatched'); location.reload();
     });
   </script>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+@endpush
+>>>>>>> repo-b/main

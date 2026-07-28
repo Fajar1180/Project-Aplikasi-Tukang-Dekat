@@ -19,7 +19,11 @@ return new class extends Migration
 
       // Tambahkan kolom status jika belum ada
       if (!Schema::hasColumn('users', 'status')) {
+<<<<<<< HEAD
         $table->enum('status', ['ACTIVE', 'INACTIVE'])->default('ACTIVE');
+=======
+        $table->enum('status', ['ACTIVE', 'INACTIVE', 'SUSPENDED'])->default('ACTIVE');
+>>>>>>> repo-b/main
       }
 
       // Tambahkan phone jika belum ada

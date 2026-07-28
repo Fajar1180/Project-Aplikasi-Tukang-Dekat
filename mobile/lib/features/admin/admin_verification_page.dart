@@ -12,6 +12,7 @@ class AdminVerificationPage extends ConsumerWidget {
     final actionState = ref.watch(adminVerificationControllerProvider);
 
     return Scaffold(
+<<<<<<< HEAD
       appBar: AppBar(
         title: const Text('Verifikasi Provider'),
         actions: [
@@ -25,6 +26,8 @@ class AdminVerificationPage extends ConsumerWidget {
           ),
         ],
       ),
+=======
+>>>>>>> repo-b/main
       body: providersAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (err, st) => Center(child: Text('Error: $err')),
@@ -43,7 +46,12 @@ class AdminVerificationPage extends ConsumerWidget {
             itemCount: providers.length,
             itemBuilder: (context, index) {
               final provider = providers[index];
+<<<<<<< HEAD
               final isProcessing = actionState.processingProviderId == provider.id;
+=======
+              final isProcessing =
+                  actionState.processingProviderId == provider.id;
+>>>>>>> repo-b/main
 
               return Card(
                 margin: const EdgeInsets.only(bottom: 12),
@@ -71,12 +79,24 @@ class AdminVerificationPage extends ConsumerWidget {
                               children: [
                                 Text(
                                   provider.businessName,
+<<<<<<< HEAD
                                   style: Theme.of(context)
                                       .textTheme
                                       .titleMedium,
                                 ),
                                 const SizedBox(height: 4),
                                 Text(provider.ownerName ?? 'Pemilik tidak diketahui'),
+=======
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.titleMedium,
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  provider.ownerName ??
+                                      'Pemilik tidak diketahui',
+                                ),
+>>>>>>> repo-b/main
                                 const SizedBox(height: 4),
                                 Text('Area: ${provider.area ?? '-'}'),
                               ],
@@ -91,13 +111,27 @@ class AdminVerificationPage extends ConsumerWidget {
                         children: [
                           Chip(
                             label: Text(
+<<<<<<< HEAD
                               provider.isVerified ? 'Terverifikasi' : 'Belum diverifikasi',
+=======
+                              provider.isVerified
+                                  ? 'Terverifikasi'
+                                  : 'Belum diverifikasi',
+>>>>>>> repo-b/main
                             ),
                             backgroundColor: provider.isVerified
                                 ? Colors.green.shade100
                                 : Colors.orange.shade100,
                           ),
+<<<<<<< HEAD
                           Chip(label: Text('Rating ${provider.avgRating.toString()}')),
+=======
+                          Chip(
+                            label: Text(
+                              'Rating ${provider.avgRating.toString()}',
+                            ),
+                          ),
+>>>>>>> repo-b/main
                         ],
                       ),
                       const SizedBox(height: 12),
@@ -109,15 +143,32 @@ class AdminVerificationPage extends ConsumerWidget {
                                   ? null
                                   : () async {
                                       final success = await ref
+<<<<<<< HEAD
                                           .read(adminVerificationControllerProvider.notifier)
+=======
+                                          .read(
+                                            adminVerificationControllerProvider
+                                                .notifier,
+                                          )
+>>>>>>> repo-b/main
                                           .setVerification(
                                             providerId: provider.id,
                                             isVerified: true,
                                           );
                                       if (success && context.mounted) {
+<<<<<<< HEAD
                                         ScaffoldMessenger.of(context).showSnackBar(
                                           const SnackBar(
                                             content: Text('Provider berhasil diverifikasi'),
+=======
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          const SnackBar(
+                                            content: Text(
+                                              'Provider berhasil diverifikasi',
+                                            ),
+>>>>>>> repo-b/main
                                           ),
                                         );
                                       }
@@ -126,7 +177,13 @@ class AdminVerificationPage extends ConsumerWidget {
                                   ? const SizedBox(
                                       width: 16,
                                       height: 16,
+<<<<<<< HEAD
                                       child: CircularProgressIndicator(strokeWidth: 2),
+=======
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                      ),
+>>>>>>> repo-b/main
                                     )
                                   : const Icon(Icons.verified),
                               label: const Text('Verifikasi'),

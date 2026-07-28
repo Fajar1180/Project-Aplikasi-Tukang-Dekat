@@ -41,10 +41,28 @@ class ReviewsResponse {
   ReviewsResponse({required this.data});
 
   factory ReviewsResponse.fromJson(Map<String, dynamic> json) {
+<<<<<<< HEAD
     return ReviewsResponse(
       data: (json['data'] as List? ?? [])
+=======
+    final rawData = json['data'];
+    List items;
+    if (rawData is List) {
+      items = rawData;
+    } else if (rawData is Map<String, dynamic>) {
+      items = rawData['reviews'] as List? ?? [];
+    } else {
+      items = [];
+    }
+    return ReviewsResponse(
+      data: items
+>>>>>>> repo-b/main
           .map((item) => ReviewData.fromJson(Map<String, dynamic>.from(item)))
           .toList(),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> repo-b/main

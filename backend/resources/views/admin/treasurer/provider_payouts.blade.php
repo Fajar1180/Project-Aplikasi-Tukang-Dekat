@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
 <head>
@@ -9,6 +10,15 @@
 </head>
 <body class="bg-gray-50">
   <div class="max-w-6xl mx-auto p-6">
+=======
+@extends('layouts.admin')
+
+@section('title', 'Provider Payouts - TukangDekat')
+@section('page_title', 'Provider Payouts')
+
+@section('admin_content')
+<div class="max-w-6xl mx-auto p-6">
+>>>>>>> repo-b/main
     <h1 class="text-2xl font-bold mb-4">Daftar Provider Payouts</h1>
 
     <div class="mb-4">
@@ -57,8 +67,15 @@
       {{ $payouts->links() }}
     </div>
   </div>
+<<<<<<< HEAD
 
   <script>
+=======
+@endsection
+
+@push('scripts')
+<script>
+>>>>>>> repo-b/main
     document.getElementById('select_all').addEventListener('change', function(e){
       document.querySelectorAll('.sel').forEach(cb => cb.checked = e.target.checked);
     });
@@ -118,5 +135,9 @@
       }
     });
   </script>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+@endpush
+>>>>>>> repo-b/main

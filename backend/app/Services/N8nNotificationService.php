@@ -9,6 +9,10 @@ class N8nNotificationService
 {
   public function dispatch(string $eventName, array $payload, string $channel = 'WA'): NotificationLog
   {
+<<<<<<< HEAD
+=======
+    $eventName = $this->normalizeEventName($eventName);
+>>>>>>> repo-b/main
     $webhookUrl = config('services.n8n.webhook_url');
     $secret = config('services.n8n.secret');
 
@@ -53,4 +57,17 @@ class N8nNotificationService
 
     return $log;
   }
+<<<<<<< HEAD
+=======
+
+  private function normalizeEventName(string $eventName): string
+  {
+    $aliases = [
+      'payment_dp_paid' => 'dp_paid',
+      'payment_final_paid' => 'final_paid',
+    ];
+
+    return $aliases[$eventName] ?? $eventName;
+  }
+>>>>>>> repo-b/main
 }

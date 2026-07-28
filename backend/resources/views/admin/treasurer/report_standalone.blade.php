@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,15 @@
 </head>
 <body class="bg-gray-50">
     <div class="max-w-6xl mx-auto p-6">
+=======
+@extends('layouts.admin')
+
+@section('title', 'Laporan Bendahara - TukangDekat')
+@section('page_title', 'Laporan Bendahara')
+
+@section('admin_content')
+<div class="max-w-6xl mx-auto p-6">
+>>>>>>> repo-b/main
         <h2 class="text-2xl font-bold mb-6">Laporan Bendahara - Pembayaran</h2>
 
         <!-- Filters -->
@@ -81,8 +91,15 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <script>
+=======
+@endsection
+
+@push('scripts')
+<script>
+>>>>>>> repo-b/main
         // Format currency IDR
         function formatCurrency(value) {
             return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(value);
@@ -344,5 +361,9 @@
         // Initial load
         load();
     </script>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+@endpush
+>>>>>>> repo-b/main

@@ -3,7 +3,13 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+<<<<<<< HEAD
   flutter_secure_storage_windows
+=======
+  file_selector_windows
+  flutter_secure_storage_windows
+  geolocator_windows
+>>>>>>> repo-b/main
   url_launcher_windows
 )
 

@@ -4,8 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+>>>>>>> repo-b/main
 
 class ProviderProfile extends Model
 {
@@ -17,13 +22,29 @@ class ProviderProfile extends Model
     'description',
     'area',
     'address',
+<<<<<<< HEAD
     'is_verified',
     'avg_rating',
+=======
+    'latitude',
+    'longitude',
+    'is_verified',
+    'is_active',
+    'avg_rating',
+    'availability_status',
+>>>>>>> repo-b/main
   ];
 
   protected $casts = [
     'is_verified' => 'boolean',
+<<<<<<< HEAD
     'avg_rating' => 'decimal:2',
+=======
+    'is_active' => 'boolean',
+    'avg_rating' => 'decimal:2',
+    'latitude' => 'decimal:7',
+    'longitude' => 'decimal:7',
+>>>>>>> repo-b/main
   ];
 
   public function user(): HasOne
@@ -35,4 +56,17 @@ class ProviderProfile extends Model
   {
     return $this->hasMany(ProviderService::class);
   }
+<<<<<<< HEAD
+=======
+
+  public function coverages(): HasMany
+  {
+    return $this->hasMany(ProviderCoverage::class, 'provider_profile_id');
+  }
+
+  public function reviews(): HasMany
+  {
+    return $this->hasMany(Review::class, 'provider_id', 'user_id');
+  }
+>>>>>>> repo-b/main
 }

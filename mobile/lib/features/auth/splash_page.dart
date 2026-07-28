@@ -30,8 +30,14 @@ class _SplashPageState extends ConsumerState<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return const Scaffold(
       body: Center(child: CircularProgressIndicator()),
     );
   }
 }
+=======
+    return const Scaffold(body: Center(child: CircularProgressIndicator()));
+  }
+}
+>>>>>>> repo-b/main

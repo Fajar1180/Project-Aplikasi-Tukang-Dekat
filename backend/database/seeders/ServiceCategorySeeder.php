@@ -21,7 +21,14 @@ class ServiceCategorySeeder extends Seeder
     ];
 
     foreach ($categories as $category) {
+<<<<<<< HEAD
       ServiceCategory::create(array_merge($category, ['is_active' => true]));
+=======
+      ServiceCategory::updateOrCreate(
+        ['name' => $category['name']],
+        array_merge($category, ['is_active' => true])
+      );
+>>>>>>> repo-b/main
     }
   }
 }

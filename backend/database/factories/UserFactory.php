@@ -27,8 +27,16 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
+<<<<<<< HEAD
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+=======
+            'phone' => fake()->numerify('+62###########'),
+            'password' => static::$password ??= Hash::make('password'),
+            'role' => fake()->randomElement(['CUSTOMER', 'PROVIDER']),
+            'status' => 'ACTIVE',
+            'email_verified_at' => now(),
+>>>>>>> repo-b/main
             'remember_token' => Str::random(10),
         ];
     }
@@ -42,4 +50,37 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Create a customer user.
+     */
+    public function customer(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => 'CUSTOMER',
+        ]);
+    }
+
+    /**
+     * Create a provider user.
+     */
+    public function provider(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => 'PROVIDER',
+        ]);
+    }
+
+    /**
+     * Create an inactive user.
+     */
+    public function inactive(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'status' => 'INACTIVE',
+        ]);
+    }
+>>>>>>> repo-b/main
 }

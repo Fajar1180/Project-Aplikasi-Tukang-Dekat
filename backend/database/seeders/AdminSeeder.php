@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+<<<<<<< HEAD
 
 class AdminSeeder extends Seeder
 {
@@ -31,4 +32,33 @@ class AdminSeeder extends Seeder
       ]
     );
   }
+=======
+use Illuminate\Support\Facades\Hash;
+
+class AdminSeeder extends Seeder
+{
+    use WithoutModelEvents;
+
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $email = env('ADMIN_SEED_EMAIL', 'admin@example.com');
+        $phone = env('ADMIN_SEED_PHONE', '081234567890');
+        $password = env('ADMIN_SEED_PASSWORD', 'password');
+
+        User::updateOrCreate(
+            ['email' => $email],
+            [
+                'name' => 'Administrator',
+                'email' => $email,
+                'phone' => $phone,
+                'password' => Hash::make($password),
+                'role' => 'ADMIN',
+                'status' => 'ACTIVE',
+            ]
+        );
+    }
+>>>>>>> repo-b/main
 }

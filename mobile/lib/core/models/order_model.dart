@@ -5,9 +5,27 @@ class OrderData {
   final int estimatedPrice;
   final int? finalPrice;
   final String address;
+<<<<<<< HEAD
   final String? notes;
   final String scheduleAt;
   final List<PaymentData> payments;
+=======
+  final double? customerLatitude;
+  final double? customerLongitude;
+  final double? providerLatitude;
+  final double? providerLongitude;
+  final String? providerName;
+  final String? notes;
+  final String? damageLevel;
+  final String? damageDescription;
+  final int? estimatedPriceMin;
+  final int? estimatedPriceMax;
+  final String? queueNote;
+  final String scheduleAt;
+  final List<PaymentData> payments;
+  final String? finalPriceApprovalStatus;
+  final List<OrderAttachment> attachments;
+>>>>>>> repo-b/main
 
   OrderData({
     required this.id,
@@ -16,9 +34,27 @@ class OrderData {
     required this.estimatedPrice,
     this.finalPrice,
     required this.address,
+<<<<<<< HEAD
     this.notes,
     required this.scheduleAt,
     required this.payments,
+=======
+    this.customerLatitude,
+    this.customerLongitude,
+    this.providerLatitude,
+    this.providerLongitude,
+    this.providerName,
+    this.notes,
+    this.damageLevel,
+    this.damageDescription,
+    this.estimatedPriceMin,
+    this.estimatedPriceMax,
+    this.queueNote,
+    required this.scheduleAt,
+    required this.payments,
+    this.finalPriceApprovalStatus,
+    this.attachments = const [],
+>>>>>>> repo-b/main
   });
 
   factory OrderData.fromJson(Map<String, dynamic> json) {
@@ -29,12 +65,77 @@ class OrderData {
       estimatedPrice: json['estimated_price'] ?? 0,
       finalPrice: json['final_price'],
       address: json['address'] ?? '',
+<<<<<<< HEAD
       notes: json['notes'],
       scheduleAt: json['schedule_at'] ?? '',
       payments: (json['payments'] as List?)
               ?.map((item) => PaymentData.fromJson(item))
               .toList() ??
           [],
+=======
+      customerLatitude: double.tryParse(
+        json['customer_latitude']?.toString() ?? '',
+      ),
+      customerLongitude: double.tryParse(
+        json['customer_longitude']?.toString() ?? '',
+      ),
+      providerLatitude: double.tryParse(
+        json['provider_latitude']?.toString() ?? '',
+      ),
+      providerLongitude: double.tryParse(
+        json['provider_longitude']?.toString() ?? '',
+      ),
+      providerName: json['provider']?['full_name'] ?? json['provider_name'],
+      notes: json['notes'],
+      damageLevel: json['damage_level'],
+      damageDescription: json['damage_description'],
+      estimatedPriceMin: json['estimated_price_min'],
+      estimatedPriceMax: json['estimated_price_max'],
+      queueNote: json['queue_note'],
+      scheduleAt: json['schedule_at'] ?? '',
+      payments:
+          (json['payments'] as List?)
+              ?.map((item) => PaymentData.fromJson(item))
+              .toList() ??
+          [],
+      finalPriceApprovalStatus: json['final_price_approval'] is Map
+          ? json['final_price_approval']['approval_status']?.toString()
+          : null,
+      attachments:
+          (json['attachments'] as List?)
+              ?.map((item) => OrderAttachment.fromJson(item))
+              .toList() ??
+          [],
+    );
+  }
+}
+
+class OrderAttachment {
+  final int id;
+  final int orderId;
+  final String type;
+  final String? publicUrl;
+  final String? fileUrl;
+  final String? purpose;
+
+  OrderAttachment({
+    required this.id,
+    required this.orderId,
+    required this.type,
+    this.publicUrl,
+    this.fileUrl,
+    this.purpose,
+  });
+
+  factory OrderAttachment.fromJson(Map<String, dynamic> json) {
+    return OrderAttachment(
+      id: json['id'] ?? 0,
+      orderId: json['order_id'] ?? 0,
+      type: json['type'] ?? '',
+      publicUrl: json['public_url'],
+      fileUrl: json['file_url'],
+      purpose: json['purpose'],
+>>>>>>> repo-b/main
     );
   }
 }
@@ -78,7 +179,12 @@ class OrdersResponse {
 
   factory OrdersResponse.fromJson(Map<String, dynamic> json) {
     return OrdersResponse(
+<<<<<<< HEAD
       data: (json['data'] as List?)
+=======
+      data:
+          (json['data'] as List?)
+>>>>>>> repo-b/main
               ?.map((item) => OrderData.fromJson(item))
               .toList() ??
           [],
@@ -90,28 +196,78 @@ class CreateOrderRequest {
   final int providerId;
   final int? categoryId;
   final int? providerServiceId;
+<<<<<<< HEAD
   final String scheduleAt;
   final String address;
   final String? notes;
   final int? estimatedPrice;
+=======
+  final int kotaId;
+  final int kecamatanId;
+  final String scheduleAt;
+  final String address;
+  final double? customerLatitude;
+  final double? customerLongitude;
+  final String? notes;
+  final String? damageLevel;
+  final String? damageDescription;
+  final int? estimatedPriceMin;
+  final int? estimatedPriceMax;
+  final int? estimatedPrice;
+  final List<String>? attachmentUrls;
+  final List<String>? attachmentPaths;
+>>>>>>> repo-b/main
 
   CreateOrderRequest({
     required this.providerId,
     this.categoryId,
     this.providerServiceId,
+<<<<<<< HEAD
     required this.scheduleAt,
     required this.address,
     this.notes,
     this.estimatedPrice,
+=======
+    required this.kotaId,
+    required this.kecamatanId,
+    required this.scheduleAt,
+    required this.address,
+    this.customerLatitude,
+    this.customerLongitude,
+    this.notes,
+    this.damageLevel,
+    this.damageDescription,
+    this.estimatedPriceMin,
+    this.estimatedPriceMax,
+    this.estimatedPrice,
+    this.attachmentUrls,
+    this.attachmentPaths,
+>>>>>>> repo-b/main
   });
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{
       'provider_id': providerId,
+<<<<<<< HEAD
       'schedule_at': scheduleAt,
       'address': address,
     };
     
+=======
+      'kota_id': kotaId,
+      'kecamatan_id': kecamatanId,
+      'schedule_at': scheduleAt,
+      'address': address,
+    };
+
+    if (customerLatitude != null) {
+      data['customer_latitude'] = customerLatitude!;
+    }
+    if (customerLongitude != null) {
+      data['customer_longitude'] = customerLongitude!;
+    }
+
+>>>>>>> repo-b/main
     if (categoryId != null) {
       data['category_id'] = categoryId!;
     }
@@ -121,10 +277,32 @@ class CreateOrderRequest {
     if (notes != null) {
       data['notes'] = notes!;
     }
+<<<<<<< HEAD
     if (estimatedPrice != null) {
       data['estimated_price'] = estimatedPrice!;
     }
     
+=======
+    if (damageLevel != null) {
+      data['damage_level'] = damageLevel!;
+    }
+    if (damageDescription != null) {
+      data['damage_description'] = damageDescription!;
+    }
+    if (estimatedPriceMin != null) {
+      data['estimated_price_min'] = estimatedPriceMin!;
+    }
+    if (estimatedPriceMax != null) {
+      data['estimated_price_max'] = estimatedPriceMax!;
+    }
+    if (estimatedPrice != null) {
+      data['estimated_price'] = estimatedPrice!;
+    }
+    if (attachmentUrls != null && attachmentUrls!.isNotEmpty) {
+      data['attachment_urls'] = attachmentUrls;
+    }
+
+>>>>>>> repo-b/main
     return data;
   }
 }

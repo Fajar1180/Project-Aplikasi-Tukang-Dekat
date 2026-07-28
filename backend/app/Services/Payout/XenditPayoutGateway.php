@@ -49,6 +49,7 @@ class XenditPayoutGateway implements PayoutGatewayInterface
             // Persist provider response if available
             if ($res) {
                 try {
+<<<<<<< HEAD
                     try {
                         @file_put_contents(base_path('storage/gateway_debug_precreate.txt'), json_encode(['pre' => true]));
                         $pathValue = null;
@@ -73,6 +74,25 @@ class XenditPayoutGateway implements PayoutGatewayInterface
                         @file_put_contents(base_path('storage/gateway_debug_create_err.txt'), $e->getMessage());
                         Log::warning('xendit.persist_response_failed', ['err' => $e->getMessage()]);
                     }
+=======
+                    $pathValue = null;
+                    if (is_object($res) && method_exists($res, 'effectiveUri')) {
+                        try {
+                            $pathValue = $res->effectiveUri() ? (string) $res->effectiveUri() : null;
+                        } catch (\Throwable $_) {
+                            $pathValue = null;
+                        }
+                    }
+
+                    PayoutProviderResponse::create([
+                        'provider' => 'xendit',
+                        'transaction_reference' => $res->json()['id'] ?? ($res->json()['reference'] ?? null),
+                        'path' => $pathValue,
+                        'request_body' => $variants[0] ?? null,
+                        'response_body' => $res->json() ?? ['body' => $res->body()],
+                        'status_code' => $res->status(),
+                    ]);
+>>>>>>> repo-b/main
                 } catch (\Throwable $e) {
                     Log::warning('xendit.persist_response_failed', ['err' => $e->getMessage()]);
                 }
@@ -168,6 +188,7 @@ class XenditPayoutGateway implements PayoutGatewayInterface
 
     protected function attemptPathsAndVariants(array $paths, array $variants)
     {
+<<<<<<< HEAD
         foreach ($paths as $path) {
             foreach ($variants as $requestBody) {
                 $res = $this->postToPath($path, $requestBody);
@@ -195,6 +216,71 @@ class XenditPayoutGateway implements PayoutGatewayInterface
                 if ($res->status() !== 404) {
                     return $res;
                 }
+=======
+        $maxAttempts = (int) env('XENDIT_RETRY_ATTEMPTS', 3);
+        $backoffMs = (int) env('XENDIT_RETRY_BACKOFF_MS', 25);
+
+        foreach ($paths as $path) {
+            foreach ($variants as $requestBody) {
+                $attempt = 0;
+                $lastRes = null;
+
+                do {
+                    $attempt++;
+                    try {
+                        $res = $this->postToPath($path, $requestBody);
+                        $lastRes = $res;
+                    } catch (\Illuminate\Http\Client\ConnectionException $e) {
+                        $lastRes = null;
+                    }
+
+                    // If we got a response, check for validation error handling first
+                    if ($lastRes) {
+                        $jsonBody = null;
+                        try {
+                            $jsonBody = $lastRes->json();
+                        } catch (\Throwable $e) {
+                            $jsonBody = null;
+                        }
+
+                        if ($jsonBody && (data_get($jsonBody, 'error_code') === 'API_VALIDATION_ERROR' || $lastRes->status() === 422)) {
+                            $lastRes = $this->handleValidationErrorRetry($lastRes, $path, $requestBody);
+                        }
+                    }
+
+                    // Retry on connection failure or server error (5xx)
+                    $shouldRetry = false;
+                    if (!$lastRes) {
+                        $shouldRetry = true;
+                    } else {
+                        try {
+                            if ($lastRes->serverError()) {
+                                $shouldRetry = true;
+                            }
+                        } catch (\Throwable $_) {
+                            // ignore and don't retry based on this check
+                        }
+                    }
+
+                    if ($shouldRetry && $attempt < $maxAttempts) {
+                        // exponential backoff (ms -> us)
+                        $delayUs = (int) ($backoffMs * 1000 * (2 ** ($attempt - 1)));
+                        usleep($delayUs);
+                        continue;
+                    }
+
+                    // If we have a response and it's not a 404, return it
+                    if ($lastRes && $lastRes->status() !== 404) {
+                        return $lastRes;
+                    }
+
+                    // If no response and we've exhausted attempts, break to next variant/path
+                    if (!$lastRes) {
+                        break;
+                    }
+
+                } while ($attempt < $maxAttempts);
+>>>>>>> repo-b/main
             }
         }
 
@@ -239,9 +325,12 @@ class XenditPayoutGateway implements PayoutGatewayInterface
 
         // Retry JSON
         $res = $this->postToPath($path, $sanitized);
+<<<<<<< HEAD
         if (env('XENDIT_DEBUG', false)) {
             Log::debug('xendit.request.sanitized', ['path' => $path, 'request' => $sanitized, 'status' => $res->status(), 'body' => $res->body()]);
         }
+=======
+>>>>>>> repo-b/main
 
         try {
             $jsonBody2 = $res->json();
@@ -255,10 +344,13 @@ class XenditPayoutGateway implements PayoutGatewayInterface
                 'Authorization' => 'Basic ' . base64_encode($this->apiKey . ':'),
                 'X-IDEMPOTENCY-KEY' => 'idem_' . sha1(($sanitized['external_id'] ?? uniqid('', true)) . $path),
             ])->timeout(15)->post($this->baseUrl . $path, $sanitized);
+<<<<<<< HEAD
 
             if (env('XENDIT_DEBUG', false)) {
                 Log::debug('xendit.request.sanitized.form', ['path' => $path, 'request' => $sanitized, 'status' => $res->status(), 'body' => $res->body()]);
             }
+=======
+>>>>>>> repo-b/main
         }
 
         return $res;

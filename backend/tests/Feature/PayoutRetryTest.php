@@ -55,7 +55,11 @@ class PayoutRetryTest extends TestCase
       'updated_at' => now(),
     ]);
 
+<<<<<<< HEAD
     Artisan::call('payouts:process');
+=======
+    Artisan::call('payouts:process', ['--dry-run' => 0]);
+>>>>>>> repo-b/main
     $payout = ProviderPayout::first();
 
     $max = (int) config('payout.max_attempts', 3);

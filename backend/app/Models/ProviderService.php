@@ -14,6 +14,10 @@ class ProviderService extends Model
     'provider_profile_id',
     'category_id',
     'name',
+<<<<<<< HEAD
+=======
+    'description',
+>>>>>>> repo-b/main
     'base_price',
     'price_unit',
     'is_active',
