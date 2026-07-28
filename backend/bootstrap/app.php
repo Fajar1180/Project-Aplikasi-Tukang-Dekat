@@ -13,9 +13,6 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
-    })
-    ->withSchedule(function (Schedule $schedule): void {
         // 0. Ensure CORS middleware is applied globally
         $middleware->prepend(\Illuminate\Http\Middleware\HandleCors::class);
 
