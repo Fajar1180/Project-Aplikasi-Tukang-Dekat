@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Repository TukangDekat (UTS → UAS)
 
 Repository ini digunakan untuk pengerjaan proyek **TukangDekat** (UTS: analisis & desain, UAS: implementasi berjalan).
@@ -807,4 +806,3 @@ Untuk berkontribusi pada proyek ini:
 ---
 
 **Versi dokumentasi:** 1.1.0
->>>>>>> repo-b/main
