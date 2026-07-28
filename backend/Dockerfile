@@ -1,5 +1,5 @@
 # 1. Menggunakan image PHP 8.3 dengan FPM (Laravel 12 butuh minimal PHP 8.2)
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
 
 # 2. Install sistem dependencies menggunakan APK (Sistem bawaan Alpine Linux)
 RUN apk update && apk add --no-cache \
