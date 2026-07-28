@@ -2,10 +2,7 @@
 
 namespace App\Providers;
 
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\URL;
->>>>>>> repo-b/main
 use Illuminate\Support\ServiceProvider;
 use App\Services\Payout\PayoutGatewayInterface;
 use App\Services\Payout\XenditPayoutGateway;
