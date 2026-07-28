@@ -13,11 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-<<<<<<< HEAD
         //
     })
     ->withSchedule(function (Schedule $schedule): void {
-=======
         // 0. Ensure CORS middleware is applied globally
         $middleware->prepend(\Illuminate\Http\Middleware\HandleCors::class);
 
@@ -35,7 +33,6 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withSchedule(function (Schedule $schedule): void {
         // Jadwal pemrosesan payout bawaan milikmu tetap dipertahankan
->>>>>>> repo-b/main
         $schedule->command('payouts:process')->dailyAt('01:00')->withoutOverlapping();
         $schedule->command('payouts:process-pending --limit=25')->everyFiveMinutes()->withoutOverlapping();
         $schedule->command('payouts:alert --since=60')->everyTenMinutes()->withoutOverlapping();
