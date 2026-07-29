@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\CatalogController;
-<<<<<<< HEAD
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\TreasurerController;
@@ -15,7 +14,6 @@ use App\Http\Controllers\Api\ReviewController;
 Route::prefix('auth')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/login', [AuthController::class, 'login']);
-=======
 use App\Http\Controllers\Api\MetricsController;
 use App\Http\Controllers\Api\N8nIntegrationController;
 use App\Http\Controllers\Api\OrderController;
@@ -34,12 +32,11 @@ Route::prefix('auth')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:10,1');
     Route::post('/session-login', [AuthController::class, 'sessionLogin'])->middleware('throttle:10,1');
     Route::post('/session-logout', [AuthController::class, 'sessionLogout'])->middleware('throttle:10,1');
->>>>>>> repo-b/main
 });
 
 // Catalog routes (public)
 Route::prefix('catalog')->group(function () {
-<<<<<<< HEAD
+
     Route::get('/categories', [CatalogController::class, 'getCategories']);
     Route::get('/categories/{categoryId}/providers', [CatalogController::class, 'getProvidersByCategory']);
     Route::get('/providers/search', [CatalogController::class, 'searchProviders']);
@@ -94,7 +91,6 @@ Route::post('/webhooks/payment', [PaymentController::class, 'webhookPaymentCallb
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-=======
     Route::get('/categories', [CatalogController::class, 'getCategories'])->middleware('throttle:60,1');
     Route::get('/wilayah/kota', [CatalogController::class, 'getKota'])->middleware('throttle:60,1');
     Route::get('/wilayah/kota/{kotaId}/kecamatan', [CatalogController::class, 'getKecamatan'])->middleware('throttle:60,1');
